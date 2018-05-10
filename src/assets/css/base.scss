@@ -1,0 +1,50 @@
+html {
+    height: 100%;
+}
+body {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    /*字体抗锯齿,使用后字体看起来会更清晰舒服*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    height: calc(100%);
+    background-color: #fff;
+    color: #606266;
+    font-size: 14px;
+}
+p, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+ul, ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img{
+    vertical-align: top;
+}
+button,input{
+    outline: none;
+    border: none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clear {
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+.commonWidth{
+    width: 1200px;
+    margin: auto;
+}
