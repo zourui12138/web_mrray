@@ -85,28 +85,28 @@
                     <ul class="clear">
                         <li class="fl">
                             <div>
-                                <img src="../../../assets/img/products/dataAssets/features_manage.png" alt="">
+                                <header><img src="../../../assets/img/products/dataAssets/features_manage.png" alt=""></header>
                                 <h1>集中策略管理</h1>
                                 <p>建立唯一身份标识实名制管理，统一账号管理策略，实现与服务器请求对接和数据交换</p>
                             </div>
                         </li>
                         <li class="fl">
                             <div>
-                                <img src="../../../assets/img/products/dataAssets/features_visit.png" alt="">
+                                <header><img src="../../../assets/img/products/dataAssets/features_visit.png" alt=""></header>
                                 <h1>集中访问控制</h1>
                                 <p>通过集中访问控制和细粒度命令级的授权策略，最小化权限原则，实现集中有序的操作管理，让正确的人在正确时间做正确的事。</p>
                             </div>
                         </li>
                         <li class="fl">
                             <div>
-                                <img src="../../../assets/img/products/dataAssets/features_audit.png" alt="">
+                                <header><img src="../../../assets/img/products/dataAssets/features_audit.png" alt=""></header>
                                 <h1>集中安全审计</h1>
                                 <p>基于唯一身份标识，对访问用户、请求系统全程安全审计，监控用户及请求操作，对危险事件及时发现预警。</p>
                             </div>
                         </li>
                         <li class="fl">
                             <div>
-                                <img src="../../../assets/img/products/dataAssets/features_distribution.png" alt="">
+                                <header><img src="../../../assets/img/products/dataAssets/features_distribution.png" alt=""></header>
                                 <h1>权限分布执行</h1>
                                 <p>被保护服务器根据控制中心权限策略，对自身系统服务进行监控，实现运维行为管理，网络请求控制功能。</p>
                             </div>
@@ -146,30 +146,21 @@
                 </ul>
             </section>
         </div>
-        <Documents :documents-list="documentsList"/>
     </div>
 </template>
 
 <script>
     import Banner from './components/Banner'
-    import Documents from './components/Documents'
     import productLogo from '~/assets/img/products/dataAssets/product_logo.png'
 
     export default {
         name: "data-assets",
-        components: {Banner, Documents},
+        components: {Banner},
         data() {
             return{
-                productLogo : {
-                    background : 'url('+ productLogo +') no-repeat 0 center'
-                },
+                productLogo : productLogo,
                 bannerTitle : '数据资产防护系统',
                 bannerContent : '数据资产防护系统主要基于数据存储安全、访问安全、运维管理等角度，多维度保护客户数据资产安全。最小权限原则，集中控制方式，免于恶意攻击，非安全环境使用，对运维、系统管理员、网络访问、访问策略等进行权限审计，正确的人通过正确手段正确的使用数据，做到数据防破坏（防删除）、免泄露。',
-                documentsList: [
-                    '《数据资产防护系统产品说明书》',
-                    '《数据资产防护系统产品白皮书》',
-                    '《数据资产防护系统产品介绍PPT》'
-                ],
                 overView: {
                     certificationNav: true,
                     authorizationNav: false,
@@ -196,37 +187,9 @@
 </script>
 
 <style lang="scss" scoped>
+    @import "./css/products";
     @function imgUrl($path) {
         @return '../../../assets/img/products/dataAssets/'+$path
-    }
-    .title {
-        width: 149px;
-        padding-top: 35px;
-        h1 {
-            font-size: 18px;
-            height: 28px;
-            line-height: 28px;
-        }
-        h2 {
-            font-size: 14px;
-            height: 22px;
-            line-height: 22px;
-            border-bottom: 2px solid #333333;
-            padding-bottom: 6px;
-        }
-    }
-    .overview {
-        section {
-            margin-top: 20px;
-            margin-bottom: 40px;
-            p {
-                width: 630px;
-                line-height: 30px;
-                margin-top: 105px;
-                text-indent: 2em;
-                text-align: justify;
-            }
-        }
     }
     .overview_{
         height: 286px;
@@ -332,59 +295,33 @@
                     text-indent: 2em;
                     line-height: 20px;
                 }
-            }
-            div:nth-child(2){
-                top:100px;
-                left:0;
-            }
-            div:nth-child(3){
-                top:284px;
-                left:0;
-            }
-            div:nth-child(4){
-                top:448px;
-                left:0;
-            }
-            div:nth-child(5){
-                top:148px;
-                right:0;
-                text-align: left;
-            }
-            div:nth-child(6){
-                top:382px;
-                right:0;
-                text-align: left;
+                &:nth-child(2){
+                    top:100px;
+                    left:0;
+                }
+                &:nth-child(3){
+                    top:284px;
+                    left:0;
+                }
+                &:nth-child(4){
+                    top:448px;
+                    left:0;
+                }
+                &:nth-child(5){
+                    top:148px;
+                    right:0;
+                    text-align: left;
+                }
+                &:nth-child(6){
+                    top:382px;
+                    right:0;
+                    text-align: left;
+                }
             }
         }
     }
     .features{
         background-color: #fcfcfc;
-        section{
-            li{
-                width:25%;
-                div{
-                    width:260px;
-                    margin:auto;
-                    text-align: center;
-                    padding-top: 40px;
-                    padding-bottom: 110px;
-                    img{
-                        vertical-align: top;
-                    }
-                    h1{
-                        font-size: 18px;
-                        color: #3096ee;
-                        height:75px;
-                        line-height: 75px;
-                    }
-                    p{
-                        line-height: 26px;
-                        text-align: justify;
-                        text-indent: 2em;
-                    }
-                }
-            }
-        }
     }
     .application{
         section{
@@ -408,9 +345,9 @@
                         overflow: hidden;
                     }
                 }
-            }
-            li:nth-child(odd){
-                margin-right: 50px;
+                &:nth-child(odd){
+                    margin-right: 50px;
+                }
             }
         }
     }

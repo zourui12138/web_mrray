@@ -57,90 +57,34 @@
                 </section>
             </div>
         </div>
-        <div class="commonWidth application">
-            <header class="title">
-                <h1>典型应用</h1>
-                <h2>Typical&nbsp;Application</h2>
-            </header>
-            <section>
-                <div class="case">
-                    <strong>——某省移动分公司</strong>
-                    <div class="clear">
-                        <span class="fl">面临问题</span>
-                        <p class="fl">某省移动分公司由于业务需要需向另两家企业提供内部数据，由于数据外发后的不可控性以及泄露后无法追责等问题，导致业务迟迟无法展开，如无法推进将导致前期投入的人力物力化为乌有，所以解决数据版权问题显得尤为重要。</p>
-                    </div>
-                    <div class="clear">
-                        <span class="fl">解决方案</span>
-                        <p class="fl">整个系统最终实现了从指定路径根据预定义规则获取数据，高速水印处理，装载到指定路径的全自动无人值守操作，用户只需要每天查看统计报表就能获悉处理情况的功能。</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <Documents :documents-list="documentsList"/>
     </div>
 </template>
 
 <script>
     import Banner from './components/Banner'
-    import Documents from './components/Documents'
     import productLogo from '~/assets/img/products/watermark/product_logo.png'
 
     export default {
         name: "watermark",
-        components: {Banner, Documents},
+        components: {Banner},
         data() {
             return{
-                productLogo : {
-                    background : 'url('+ productLogo +') no-repeat 0 center'
-                },
+                productLogo : productLogo,
                 bannerTitle : '数字水印系统',
-                bannerContent : '迅鳐水印标记与溯源系统的基本应用领域是防伪溯源、版权保护、隐藏标识、认证，其具备不可感知性、隐藏位置安全性、鲁棒性、隐藏信息量大等特点。',
-                documentsList: [
-                    '《数字水印系统产品说明书》',
-                    '《数字水印系统产品白皮书》',
-                    '《数字水印系统产品介绍PPT》'
-                ]
+                bannerContent : '迅鳐水印标记与溯源系统的基本应用领域是防伪溯源、版权保护、隐藏标识、认证，其具备不可感知性、隐藏位置安全性、鲁棒性、隐藏信息量大等特点。'
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
+    @import "./css/products";
     @function imgUrl($path) {
         @return '../../../assets/img/products/watermark/'+$path;
     }
-    .title {
-        width: 149px;
-        padding-top: 35px;
-        h1 {
-            font-size: 18px;
-            height: 28px;
-            line-height: 28px;
-        }
-        h2 {
-            font-size: 14px;
-            height: 22px;
-            line-height: 22px;
-            border-bottom: 2px solid #333333;
-            padding-bottom: 6px;
-        }
-    }
-    .overview{
-        section{
-            margin-top:20px;
-            margin-bottom: 40px;
-            p{
-                width:630px;
-                line-height: 30px;
-                margin-top: 105px;
-                text-indent: 2em;
-                text-align: justify;
-            }
-        }
-    }
     .function{
         background-color: #fcfcfc;
-        >div{
+        .commonWidth{
             height:730px;
             background: url(imgUrl('function.png')) no-repeat left center;
             section{
@@ -159,49 +103,13 @@
                         width:570px;
                         margin-left: 20px;
                         height:40px;
+                        &.one{
+                            line-height: 40px;
+                        }
+                        &.two{
+                            line-height: 20px;
+                        }
                     }
-                    p.one{
-                        line-height: 40px;
-                    }
-                    p.two{
-                        line-height: 20px;
-                    }
-                }
-            }
-        }
-    }
-    .application{
-        .case{
-            margin-top: 30px;
-            margin-bottom: 30px;
-            strong{
-                color: #fff;
-                background-color: #3096ee;
-                font-weight: normal;
-                line-height: 40px;
-                height:40px;
-                padding:0 12px;
-                display: inline-block;
-                border-radius: 4px;
-            }
-            div{
-                margin-top: 20px;
-                span{
-                    width:20px;
-                    height:80px;
-                    border:1px dashed #aaa;
-                    background-color: #f2f2f2;
-                    line-height: 20px;
-                    text-align: center;
-                    padding:9px 9px;
-                }
-                p{
-                    width:1119px;
-                    height:40px;
-                    border:1px dashed #aaa;
-                    border-left:none;
-                    line-height: 20px;
-                    padding:29px 20px;
                 }
             }
         }

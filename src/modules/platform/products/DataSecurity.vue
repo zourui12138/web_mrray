@@ -59,35 +59,35 @@
                 <ul class="clear">
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/dataSecurity/features_1.png" alt="">
+                            <header><img src="../../../assets/img/products/dataSecurity/features_1.png" alt=""></header>
                             <h1>统一标准</h1>
                             <p>提供统一的Hadoop集群认证入口，保证Hadoop集群用户无法任意访问获取数据，以造成数据留失。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/dataSecurity/features_2.png" alt="">
+                            <header><img src="../../../assets/img/products/dataSecurity/features_2.png" alt=""></header>
                             <h1>未授权重定向</h1>
                             <p>未经过LDAP、AD以及其他SSO非授权访问用户重定向。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/dataSecurity/features_3.png" alt="">
+                            <header><img src="../../../assets/img/products/dataSecurity/features_3.png" alt=""></header>
                             <h1>禁止绕行访问</h1>
                             <p>实现Hadoop用户、4A业务用户、以及LDAP或AD域的原有业务系统用户的认证和授权；禁止非法用户绕过认证服务集群。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/dataSecurity/features_4.png" alt="">
+                            <header><img src="../../../assets/img/products/dataSecurity/features_4.png" alt=""></header>
                             <h1>处理高效</h1>
                             <p>设备独立、无侵入式地与现有Hadoop平台相结合使用，单机性能支持1000MB/s读写I/O，支持集群式扩展负载均衡和热备转移功能。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/dataSecurity/features_5.png" alt="">
+                            <header><img src="../../../assets/img/products/dataSecurity/features_5.png" alt=""></header>
                             <h1>细粒度权限</h1>
                             <p>细粒度访问控制，鉴权用户，同时满足操作对象和操作指令授权的“2层授权”后放行；细化操作对象到“服务器、数据库、目录、文件、表名、列、行”等内容。</p>
                         </div>
@@ -111,127 +111,74 @@
                 </section>
             </div>
         </div>
-        <Documents :documents-list="documentsList"/>
     </div>
 </template>
 
 <script>
     import Banner from './components/Banner'
-    import Documents from './components/Documents'
     import productLogo from '~/assets/img/products/dataSecurity/product_logo.png'
 
     export default {
         name: "data-security",
-        components: {Banner, Documents},
+        components: {Banner},
         data() {
             return{
-                productLogo : {
-                    background : 'url('+ productLogo +') no-repeat 0 center'
-                },
+                productLogo : productLogo,
                 bannerTitle : '大数据安全监控平台',
-                bannerContent : '大数据安全管控平台的基本应用行业是银行业、金融业、政府企业等数据查看权限成阶梯状的行业，其具备细粒度权限管控、业务流程不变、支持多种大数据平台等特点。',
-                documentsList: [
-                    '《大数据安全监控平台产品说明书》',
-                    '《大数据安全监控平台产品白皮书》',
-                    '《大数据安全监控平台产品介绍PPT》'
-                ]
+                bannerContent : '大数据安全管控平台的基本应用行业是银行业、金融业、政府企业等数据查看权限成阶梯状的行业，其具备细粒度权限管控、业务流程不变、支持多种大数据平台等特点。'
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
+    @import "./css/products";
     @function imgUrl($path) {
         @return '../../../assets/img/products/dataSecurity/'+$path
-    }
-    .title {
-        width: 149px;
-        padding-top: 35px;
-        h1 {
-            font-size: 18px;
-            height: 28px;
-            line-height: 28px;
-        }
-        h2 {
-            font-size: 14px;
-            height: 22px;
-            line-height: 22px;
-            border-bottom: 2px solid #333333;
-            padding-bottom: 6px;
-        }
-    }
-    .overview{
-        section{
-            margin-top:20px;
-            margin-bottom: 40px;
-            p{
-                width:630px;
-                line-height: 30px;
-                margin-top: 20px;
-                text-indent: 2em;
-                text-align: justify;
-            }
-        }
     }
     .function{
         background-color: #fcfcfc;
         li{
             padding:20px 0;
-            span{
-                width:20px;
-                background-color: #3096ee;
-                color: #fff;
-                line-height: 20px;
-                text-align: center;
-                padding:128px 20px;
-                height:220px;
-            }
-            div>div{
-                width:1110px;
-                text-align: center;
-                h1{
-                    text-align: left;
-                    line-height: 30px;
+            .commonWidth{
+                span{
+                    width:20px;
+                    background-color: #3096ee;
+                    color: #fff;
+                    line-height: 20px;
+                    text-align: center;
+                    padding:128px 20px;
+                    height:220px;
                 }
-                img{
-                    margin:auto;
-                    vertical-align: top;
+                div{
+                    width:1110px;
+                    text-align: center;
+                    h1{
+                        text-align: left;
+                        line-height: 30px;
+                    }
                 }
             }
-        }
-        li:nth-child(even){
-            background-color: #fff;
-        }
-        li:nth-child(3) span{
-            height:320px;
-            padding:93px 20px;
+            &:nth-child(even){
+                background-color: #fff;
+            }
+            &:nth-child(3){
+                span{
+                    height:320px;
+                    padding:93px 20px;
+                }
+            }
         }
     }
     .features{
         section{
             ul{
-                padding: 40px 0;
                 li{
                     width:400px;
                     div{
                         width:320px;
-                        margin:auto;
-                        text-align: center;
-                        height:200px;
-                        padding-bottom: 40px;
-                        img{
-                            vertical-align: top;
-                        }
-                        h1{
-                            font-size: 18px;
-                            color: #3096ee;
-                            height:75px;
-                            line-height: 75px;
-                        }
-                        p{
-                            line-height: 26px;
-                            text-align: justify;
-                            text-indent: 2em;
+                        header{
+                            width:320px;
                         }
                     }
                 }
@@ -254,9 +201,9 @@
                 padding-left: 20px;
                 width:380px;
                 margin-bottom: 40px;
-            }
-            p:nth-child(4){
-                margin-bottom: 148px;
+                &:nth-child(4){
+                    margin-bottom: 148px;
+                }
             }
         }
     }

@@ -2,7 +2,7 @@
     <div class="banner">
         <div class="commonWidth">
             <div class="productIntroduce">
-                <h1 :style="productLogo">{{bannerTitle}}</h1>
+                <h1 :style="{background : 'url('+ productLogo +') no-repeat 0 center'}">{{bannerTitle}}</h1>
                 <p v-html="bannerContent"></p>
                 <button type="button">申请试用</button>
             </div>
