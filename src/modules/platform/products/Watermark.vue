@@ -1,5 +1,6 @@
 <template>
     <div id="product-watermark">
+        <Wave/>
         <Banner :banner-title="bannerTitle" :banner-content="bannerContent" :product-logo="productLogo"/>
         <div class="commonWidth overview">
             <header class="title">
@@ -61,12 +62,13 @@
 </template>
 
 <script>
+    import Wave from '../../../components/Wave'
     import Banner from './components/Banner'
     import productLogo from '~/assets/img/products/watermark/product_logo.png'
 
     export default {
         name: "watermark",
-        components: {Banner},
+        components: {Banner,Wave},
         data() {
             return{
                 productLogo : productLogo,
