@@ -18,13 +18,13 @@
             let camera,// 相机
                 scene,// 场景
                 renderer,// 渲染对象
-                SEPARATION = 50,// 间距
+                SEPARATION = 100,// 间距
                 AMOUNTX = 50,// X方向的数量
                 AMOUNTY = 50,// Y方向的数量
                 particle,// 精灵对象
                 particles = [],// 精灵对象的集合
                 mouseX = 0,
-                mouseY = -200,
+                mouseY = 0,
                 count = 0;
             let onWindowResize = () => {
                 camera.aspect = window.innerWidth / 400;

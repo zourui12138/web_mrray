@@ -1,5 +1,5 @@
 <template>
-    <div id="product-watermark">
+    <div>
         <Banner :banner-title="bannerTitle" :banner-content="bannerContent" :product-logo="productLogo"/>
         <div class="commonWidth overview">
             <header class="title">

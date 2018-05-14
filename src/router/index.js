@@ -13,6 +13,9 @@ import CapacityShareBlockChain from '../modules/platform/products/CapacityShareB
 import GovernmentBlockChain from '../modules/platform/products/GovernmentBlockChain'
 import MedicalBlockChain from '../modules/platform/products/MedicalBlockChain'
 import StorageBlockChain from '../modules/platform/products/StorageBlockChain'
+// 官网展示-->关于我们
+import Jobs from '../modules/platform/aboutUs/Jobs'
+import Introduce from '../modules/platform/aboutUs/Introduce'
 // 后台官网网站
 import Admin from '../modules/admin/Admin'
 Vue.use(Router);
@@ -69,6 +72,17 @@ export default new Router({
                     path: '/storageBlockChain',
                     name: 'storageBlockChain',
                     component: StorageBlockChain
+                },
+                // 关于我们
+                {
+                    path: '/jobs',
+                    name: 'jobs',
+                    component: Jobs
+                },
+                {
+                    path: '/introduce',
+                    name: 'introduce',
+                    component: Introduce
                 }
             ]
         },

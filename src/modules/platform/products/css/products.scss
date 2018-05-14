@@ -61,3 +61,39 @@
         }
     }
 }
+.scenario{
+    ul{
+        padding-top: 40px;
+        padding-bottom: 60px;
+        li{
+            position: relative;
+            cursor: pointer;
+            width: 370px;
+            height: 224px;
+            overflow: hidden;
+            >img{
+                transition: all .5s;
+            }
+            &:hover > img{
+                transform: scale(1.4);
+            }
+            div{
+                position: absolute;
+                top: 64px;
+                color: #fff;
+                text-align: center;
+                width: 80px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                p{
+                    height: 80px;
+                    line-height: 80px;
+                }
+            }
+            &:nth-child(2){
+                margin: 0 45px;
+            }
+        }
+    }
+}
