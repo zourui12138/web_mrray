@@ -24,27 +24,6 @@
                 <div class="banner_right fr"></div>
             </div>
         </div>
-        <div class="commonWidth">
-            <el-carousel :autoplay="false" trigger="click" arrow="never" type="card" height="350px">
-                <el-carousel-item v-for="item in 3" :key="item">
-                    <div class="coreCreationBox" v-if="item === 1">
-                        <h1>张小松</h1>
-                        <h2>迅鳐科技首席科学家</h2>
-                        <img src="../../../assets/img/aboutUs/introduce/zhang.png" alt="">
-                    </div>
-                    <div class="coreCreationBox" v-if="item === 2">
-                        <h1>陈瑞东</h1>
-                        <h2>迅鳐科技COO</h2>
-                        <img src="../../../assets/img/aboutUs/introduce/chen.png" alt="">
-                    </div>
-                    <div class="coreCreationBox" v-if="item === 3">
-                        <h1>夏琦</h1>
-                        <h2>迅鳐科技CTO</h2>
-                        <img src="../../../assets/img/aboutUs/introduce/xia.png" alt="">
-                    </div>
-                </el-carousel-item>
-            </el-carousel>
-        </div>
         <div class="eventList">
             <div class="commonWidth">
                 <header class="title">
@@ -54,8 +33,11 @@
             </div>
             <div class="timeAxis">
                 <div class="commonWidth">
-                    <ul class="clear" v-bind:style="{width : timeAxisWidth}" ref="timeAxis">
-                        <li class="fl" v-for="(i,index) in eventsList" v-bind:class="{current : currentYear === i.year}" @click="timeAxisMove(i.year,index)">{{i.year}}</li>
+                    <ul class="clear">
+                        <li class="fl"
+                            v-for="(i,index) in eventsList"
+                            v-bind:class="{current : currentYear === i.year}"
+                            @click="timeAxisMove(i.year,index)">{{i.year}}</li>
                     </ul>
                 </div>
             </div>
@@ -73,68 +55,40 @@
                     <h2>Core&nbsp;Creation</h2>
                 </header>
                 <section>
-                    <div class="coreCreationList">
-                        <div v-for="(i,index) in coreCreationList" :class="coreCreationClassName[index]">
-                            <h1>{{i.name}}</h1>
-                            <h2>{{i.position}}</h2>
-                            <img :src="i.src" alt="" @click="coreCreationAnimate(index)">
-                        </div>
-                    </div>
-                    <div class="coreCreationMsg">
-                        <ul class="clear">
-                            <li class="fl">
-                                <transition name="bounce">
-                                    <div v-show="currentCoreCreation === '张小松'">
-                                        <p v-for="i in coreCreationList[0].personalProfile"><strong></strong><span>{{i}}</span></p>
-                                    </div>
-                                </transition>
-                                <transition name="bounce">
-                                    <div v-show="currentCoreCreation === '夏琦'">
-                                        <p v-for="i in coreCreationList[0].personalProfile"><strong></strong><span>{{i}}</span></p>
-                                    </div>
-                                </transition>
-                                <transition name="bounce">
-                                    <div v-show="currentCoreCreation === '陈瑞东'">
-                                        <p v-for="i in coreCreationList[0].personalProfile"><strong></strong><span>{{i}}</span></p>
-                                    </div>
-                                </transition>
-                            </li>
-                            <li class="fl">
-                                <transition name="bounce">
-                                    <div v-show="currentCoreCreation === '张小松'">
-                                        <p>{{coreCreationList[0].researchDirection}}</p>
-                                    </div>
-                                </transition>
-                                <transition name="bounce">
-                                    <div v-show="currentCoreCreation === '夏琦'">
-                                        <p>{{coreCreationList[0].researchDirection}}</p>
-                                    </div>
-                                </transition>
-                                <transition name="bounce">
-                                    <div v-show="currentCoreCreation === '陈瑞东'">
-                                        <p>{{coreCreationList[0].researchDirection}}</p>
-                                    </div>
-                                </transition>
-                            </li>
-                            <li class="fl">
-                                <transition name="bounce">
-                                    <div v-show="currentCoreCreation === '张小松'">
-                                        <p v-for="i in coreCreationList[0].kudos"><strong></strong><span>{{i}}</span></p>
-                                    </div>
-                                </transition>
-                                <transition name="bounce">
-                                    <div v-show="currentCoreCreation === '夏琦'">
-                                        <p v-for="i in coreCreationList[0].kudos"><strong></strong><span>{{i}}</span></p>
-                                    </div>
-                                </transition>
-                                <transition name="bounce">
-                                    <div v-show="currentCoreCreation === '陈瑞东'">
-                                        <p v-for="i in coreCreationList[0].kudos"><strong></strong><span>{{i}}</span></p>
-                                    </div>
-                                </transition>
-                            </li>
-                        </ul>
-                    </div>
+                    <el-carousel
+                        :autoplay="false"
+                        trigger="click"
+                        arrow="never"
+                        type="card"
+                        height="350px"
+                        @change="initCoreCreationMsg">
+                        <el-carousel-item name="zhang" class="coreCreationBox">
+                            <h1>张小松</h1>
+                            <h2>迅鳐科技首席科学家</h2>
+                            <img src="../../../assets/img/aboutUs/introduce/zhang.png" alt="">
+                        </el-carousel-item>
+                        <el-carousel-item name="chen" class="coreCreationBox">
+                            <h1>陈瑞东</h1>
+                            <h2>迅鳐科技COO</h2>
+                            <img src="../../../assets/img/aboutUs/introduce/chen.png" alt="">
+                        </el-carousel-item>
+                        <el-carousel-item name="xia" class="coreCreationBox">
+                            <h1>夏琦</h1>
+                            <h2>迅鳐科技CTO</h2>
+                            <img src="../../../assets/img/aboutUs/introduce/xia.png" alt="">
+                        </el-carousel-item>
+                    </el-carousel>
+                    <ul class="clear">
+                        <li class="fl">
+                            <p v-for="i in coreCreationMsg.personalProfile"><strong></strong><span>{{i}}</span></p>
+                        </li>
+                        <li class="fl">
+                            <p>{{coreCreationMsg.researchDirection}}</p>
+                        </li>
+                        <li class="fl">
+                            <p v-for="i in coreCreationMsg.kudos"><strong></strong><span>{{i}}</span></p>
+                        </li>
+                    </ul>
                 </section>
             </div>
         </div>
@@ -142,9 +96,6 @@
 </template>
 
 <script>
-    import Zhang from '~/assets/img/aboutUs/introduce/zhang.png'
-    import Xia from '~/assets/img/aboutUs/introduce/xia.png'
-    import Chen from '~/assets/img/aboutUs/introduce/chen.png'
     import Vue from 'vue';
     import { Carousel, CarouselItem } from 'element-ui'
     Vue.use(Carousel);
@@ -215,17 +166,12 @@
                         events : []
                     }
                 ],
-                index : 0,// 根据不同的索引值需改不同的计算属性
-                step : 0, // 移动几步
+                index : 2,// 根据不同的索引值需改不同的计算属性
                 bannerLeftIntroduceNav: true,
                 bannerLeftCultureNav: false,
-                coreCreationClassName: ['','',''],
-                isAnimate: false,
                 coreCreationList: [
                     {
-                        src : Zhang,
                         name : '张小松',
-                        position : '迅鳐科技首席科学家',
                         personalProfile : [
                             '长江学者特聘教授；',
                             '教育部十三五网络空间安全战略规划组长；',
@@ -244,9 +190,23 @@
                         ]
                     },
                     {
-                        src : Xia,
+                        name : '陈瑞东',
+                        personalProfile : [
+                            '电子科技大学计算机博士；',
+                            '主要从事数据安全、网络与云安全、系统攻击与测试验证等研究工作；',
+                            '具有大型系统架构设计、网络安全解决方案的设计与实验经验；'
+                        ],
+                        researchDirection : '主要从事数据结构、信息安全技术、网络空间协议、数据通信协议等领域研究，具有政务数据基础设施设计、数据流通共享机制、数据安全生态布防经验，为多家企业提供信息安全（数据存储、数据共享、数据决策性管理等）解决方案。',
+                        kudos : [
+                            '参编网络溯源专著1部，国内外发表论文5篇',
+                            '国家发明专利5项',
+                            '省科技进步一等奖1项，二等奖1项',
+                            '国家科技进步奖',
+                            '参与国家863重大课题、国家自然科学基金面上、军方型号、华为、中电集团等课题70余项'
+                        ]
+                    },
+                    {
                         name : '夏琦',
-                        position : '迅鳐科技COO',
                         personalProfile : [
                             '电子科技大学计算机应用技术工学博士，电子科技大学副教授，研究生导师；',
                             '美国宾夕法尼亚大学访问学者；',
@@ -261,102 +221,34 @@
                             '发表论文20余篇，出版教材多部，英文专著一部',
                             '国家自然科学基金国际合作项目：SecureMultiparty Computation: Efficiency andApplications，2013.01-2013,12，第一负责人'
                         ]
-                    },
-                    {
-                        src : Chen,
-                        name : '陈瑞东',
-                        position : '迅鳐科技CTO',
-                        personalProfile : [
-                            '电子科技大学计算机博士；',
-                            '主要从事数据安全、网络与云安全、系统攻击与测试验证等研究工作；',
-                            '具有大型系统架构设计、网络安全解决方案的设计与实验经验；'
-                        ],
-                        researchDirection : '主要从事数据结构、信息安全技术、网络空间协议、数据通信协议等领域研究，具有政务数据基础设施设计、数据流通共享机制、数据安全生态布防经验，为多家企业提供信息安全（数据存储、数据共享、数据决策性管理等）解决方案。',
-                        kudos : [
-                            '参编网络溯源专著1部，国内外发表论文5篇',
-                            '国家发明专利5项',
-                            '省科技进步一等奖1项，二等奖1项',
-                            '国家科技进步奖',
-                            '参与国家863重大课题、国家自然科学基金面上、军方型号、华为、中电集团等课题70余项'
-                        ]
                     }
-                ]
+                ],
+                coreCreationMsg : {}
             }
         },
         computed:{
-            timeAxisWidth() {
-                return 1200+280*(this.eventsList.length-5)+'px'
-            },
-            currentEventsList() {
-                return this.eventsList[this.index].events;
-            },
+            // 时间轴当前时间
             currentYear() {
                 return this.eventsList[this.index].year;
             },
-            currentCoreCreation() {
-                return this.coreCreationList[0].name;
-            }
+            // 时间轴当前时间的事件
+            currentEventsList() {
+                return this.eventsList[this.index].events;
+            },
         },
         methods: {
+            // 时间抽切换当前时间
             timeAxisMove(target,index) {
-                let beforeCurrent = this.currentYear;
                 this.index = index;
-                if(this.eventsList.length > 5){
-                    let distance = 280,// 移动一次的距离
-                        isMove = false,// 是否移动
-                        first = this.eventsList[0].year,
-                        last = this.eventsList[this.eventsList.length-1].year,
-                        totalStep = this.eventsList.length-5;
-                    if(!isMove){
-                        isMove = true;
-                        if(target > beforeCurrent && this.step < totalStep){// 可以向左移动
-                            if(totalStep-this.step < 2){
-                                this.step += target <= first+2 ? 0 : 1;
-                            }else{
-                                target > first+2 && (this.step += beforeCurrent <= first+2 ? target-(first+2) : target-beforeCurrent);
-                            }
-                        }else if(target < beforeCurrent && this.step > 0){// 可以向右移动
-                            if(this.step < 2){
-                                this.step -= target >= last-2 ? 0 : 1;
-                            }else{
-                                target < last-2 && (this.step -= beforeCurrent >= last-2 ? last-2-target : beforeCurrent-target);
-                            }
-                        }
-                        $(this.$refs.timeAxis).animate({left : -this.step*distance+'px'},500,function () {isMove = false;});
-                    }
-                }
             },
+            // banner简介和企业文化的切换
             toggleBannerLeftContent() {
                 this.bannerLeftIntroduceNav = !this.bannerLeftIntroduceNav;
                 this.bannerLeftCultureNav = !this.bannerLeftCultureNav;
             },
-            moveLeft() {
-                this.$set(this.coreCreationClassName,0,'moveLeft');
-                this.$set(this.coreCreationClassName,1,'moveRight');
-                this.$set(this.coreCreationClassName,2,'moveCenter');
-                this.isAnimate = true;
-            },
-            moveRight() {
-                this.$set(this.coreCreationClassName,0,'moveRight');
-                this.$set(this.coreCreationClassName,1,'moveCenter');
-                this.$set(this.coreCreationClassName,2,'moveLeft');
-                this.isAnimate = true;
-            },
-            coreCreationAnimate(index) {
-                let me = this;
-                if(!this.isAnimate){
-                    index === 1 && (this.moveRight());
-                    index === 2 && (this.moveLeft());
-                    console.log(index);
-                    setTimeout(function () {
-                        me.isAnimate = false;
-                        me.$set(me.coreCreationClassName,0,'');
-                        me.$set(me.coreCreationClassName,1,'');
-                        me.$set(me.coreCreationClassName,2,'');
-                        index === 1 && (me.coreCreationList = me.coreCreationList.concat(me.coreCreationList.splice(0,1)));
-                        index === 2 && (me.coreCreationList = me.coreCreationList.splice(me.coreCreationList.length-1,1).concat(me.coreCreationList));
-                    },500);
-                }
+            // 根据索引确定当前核心人物的信息
+            initCoreCreationMsg(index) {
+                this.coreCreationMsg = this.coreCreationList[index];
             }
         }
     }
@@ -493,6 +385,7 @@
             background-color: #fcfcfc;
             line-height: 50px;
             padding:10px 0;
+            height: 200px;
             strong{
                 display: inline-block;
                 height:30px;
@@ -516,51 +409,22 @@
     .coreCreation{
         background: url(imgUrl('coreCreation.png')) no-repeat center bottom;
         section{
-            height:765px;
-            .coreCreationList{
-                transform-style: preserve-3d;
-                perspective : 1500px;
-                position: relative;
-                div{
-                    width:250px;
-                    height:350px;
-                    position: absolute;
-                    top:40px;
-                    left:0;
-                    right:0;
-                    margin:auto;
-                    text-align: center;
-                    line-height: 40px;
-                    h1{
-                        font-size: 24px;
-                    }
-                    h2{
-                        font-size: 14px;
-                        margin-bottom: 20px;
-                    }
-                    &.moveLeft{
-                        animation: moveLeft .5s both linear;
-                    }
-                    &.moveRight{
-                        animation: moveRight .5s both linear;
-                    }
-                    &.moveCenter{
-                        animation: moveCenter .5s both linear;
-                    }
-                    &:nth-child(1){
-                        transform: translateZ(0) translateX(0);
-                        color: #2e95ee;
-                    }
-                    &:nth-child(2){
-                        transform: translateZ(-450px) translateX(-450px);
-                    }
-                    &:nth-child(3){
-                        transform: translateZ(-450px) translateX(450px);
-                    }
+            padding-top: 20px;
+            .coreCreationBox{
+                width:250px;
+                line-height: 40px;
+                text-align: center;
+                margin: 0 175px;
+                h1{
+                    font-size: 24px;
+                }
+                h2{
+                    font-size: 14px;
+                    margin-bottom: 20px;
                 }
             }
-            .coreCreationMsg{
-                padding-top: 445px;
+            ul{
+                padding-top: 50px;
                 li{
                     width:280px;
                     height: 240px;
@@ -581,9 +445,6 @@
                             margin-right: 5px;
                         }
                     }
-                    .bounce-enter-active {
-                        animation: bounceIn .5s;
-                    }
                     &:nth-child(1){
                         background: url(imgUrl('personal_profile.png')) no-repeat center 0;
                     }
@@ -597,19 +458,6 @@
             }
         }
     }
-    .coreCreationBox{
-        width:250px;
-        line-height: 40px;
-        text-align: center;
-        margin: auto;
-        h1{
-            font-size: 24px;
-        }
-        h2{
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-    }
 </style>
 
 <style lang="scss">
@@ -618,5 +466,10 @@
     }
     .el-carousel__mask{
         display: none;
+    }
+    .el-carousel__item--card.is-active{
+        h1,h2{
+            color: #2e95ee;
+        }
     }
 </style>
