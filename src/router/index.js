@@ -14,6 +14,14 @@ import GovernmentBlockChain from '../modules/platform/products/GovernmentBlockCh
 import MedicalBlockChain from '../modules/platform/products/MedicalBlockChain'
 import StorageBlockChain from '../modules/platform/products/StorageBlockChain'
 import DataCirculation from '../modules/platform/products/DataCirculation'
+//官网解决方案
+import f_DataAssets from '../modules/platform/solution/DataAssets'
+import Credit from '../modules/platform/solution/credit'
+import Supply from '../modules/platform/solution/supply'
+import Fnance from '../modules/platform/solution/fnance'
+import Automobile from '../modules/platform/solution/automobile'
+import Circulation from '../modules/platform/solution/circulation'
+import Logistics from '../modules/platform/solution/logistics'
 // 官网展示-->新闻咨询
 import News from '../modules/platform/news/News'
 // 官网展示-->关于我们
@@ -80,6 +88,42 @@ export default new Router({
                     path: '/dataCirculation',
                     name: 'dataCirculation',
                     component: DataCirculation
+                },
+				//解决方案
+                {
+                    path: '/f_DataAssets',
+                    name: 'f_DataAssets',
+                    component: f_DataAssets
+                },
+                {
+                    path: '/f_credit',
+                    name: 'f_credit',
+                    component: Credit
+                },
+                {
+                    path: '/f_supply',
+                    name: 'f_supply',
+                    component: Supply
+                },
+                {
+                    path: '/f_fnance',
+                    name: 'f_fnance',
+                    component: Fnance
+                },
+                {
+                    path: '/f_automobile',
+                    name: 'f_automobile',
+                    component: Automobile
+                },
+                {
+                    path: '/f_circulation',
+                    name: 'f_circulation',
+                    component: Circulation
+                },
+                {
+                    path: '/f_logistics',
+                    name: 'f_logistics',
+                    component: Logistics
                 },
                 // 新闻咨询
                 {
