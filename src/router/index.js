@@ -16,6 +16,12 @@ import Products_StorageBlockChain from '../modules/platform/products/StorageBloc
 import Products_DataCirculation from '../modules/platform/products/DataCirculation'
 //官网解决方案
 import Solution_DataAssets from '../modules/platform/solution/DataAssets'
+import Solution_CarIndustry from '../modules/platform/solution/CarIndustry'
+import Solution_Circulation from '../modules/platform/solution/Circulation'
+import Solution_Credit from '../modules/platform/solution/Credit'
+import Solution_Financial from '../modules/platform/solution/Financial'
+import Solution_Logistics from '../modules/platform/solution/Logistics'
+import Solution_SupplyChain from '../modules/platform/solution/SupplyChain'
 // 官网展示-->新闻咨询
 import News from '../modules/platform/news/News'
 // 官网展示-->关于我们
@@ -88,6 +94,36 @@ export default new Router({
                     path: '/solution_dataAssets',
                     name: 'solution_dataAssets',
                     component: Solution_DataAssets
+                },
+                {
+                    path: '/solution_carIndustry',
+                    name: 'solution_carIndustry',
+                    component: Solution_CarIndustry
+                },
+                {
+                    path: '/solution_circulation',
+                    name: 'solution_circulation',
+                    component: Solution_Circulation
+                },
+                {
+                    path: '/solution_credit',
+                    name: 'solution_credit',
+                    component: Solution_Credit
+                },
+                {
+                    path: '/solution_financial',
+                    name: 'solution_financial',
+                    component: Solution_Financial
+                },
+                {
+                    path: '/solution_logistics',
+                    name: 'solution_logistics',
+                    component: Solution_Logistics
+                },
+                {
+                    path: '/solution_supplyChain',
+                    name: 'solution_supplyChain',
+                    component: Solution_SupplyChain
                 },
                 // 新闻咨询
                 {

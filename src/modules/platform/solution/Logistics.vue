@@ -10,18 +10,18 @@
                 <ul class="fl">
                     <li class="clear">
                         <strong class="fl">1</strong>
-                        <p class="fr">确权、维权难：数据提供方卖出的数据面临被无限次盗卖、市场价值不断损减的风险，严重制约了数据市场的规模与发展；</p>
+                        <p class="fr">物流行业成本越来越高，物流企业多、小、散、弱，行业信息同步不及时。</p>
                     </li>
                     <li class="clear">
                         <strong class="fl">2</strong>
-                        <p class="fr">数据造假：某些数据提供方为获得利益提供造假的数据，根据真实数据扩充伪造的数据量，保证模型拟合性不变，但是伪造的数据会导致数据挖掘的结果错误；</p>
+                        <p class="fr">物流格局陈旧，人工易出错，途中故障难以实时追踪</p>
                     </li>
                     <li class="clear">
                         <strong class="fl">3</strong>
-                        <p class="fr">需求无法满足：数据价值在企业升级转型中的作用愈加凸显，企业对于专业数据的需求越来越强烈，但企业的这些需求无法得到及时的相应和满足。</p>
+                        <p class="fr">信任危机严重，货物流失难追责。</p>
                     </li>
                 </ul>
-                <img class="fr" src="../../../assets/img/solution/dataAssets/overview.png" alt="">
+                <img class="fr" src="../../../assets/img/solution/logistics/overview.png" alt="">
             </section>
         </div>
         <div class="function">
@@ -30,23 +30,23 @@
                     <h1>方案概述</h1>
                     <h2>Solution&nbsp;Function</h2>
                 </header>
-                <h1>迅鳐数据资产解决方案提供了可追溯路径，能有效破解数据确权难题。通过网络中多个参与计算的节点来共同参与数据的计算和记录，并且互相验证其信息的有效，既可以进行信息防伪，又提供了可追溯路径。</h1>
+                <h1>物流货运区块链让所有物流链条中的商品可追溯、可证伪、不可篡改，实现物流商品的资产化。利用区块链基础平台，可使资金有效、快速地接入到物流行业，从而改善中小企业的营商环境。</h1>
                 <section>
                     <div>
                         <button type="button">确权证书</button>
                         <p>数据作为受保护的虚拟资产，每份符合标准且有效的数 据和交易都有对应的确权证书。</p>
                     </div>
                     <div>
-                        <button type="button">数据授权记录</button>
-                        <p>数据作为受保护的虚拟资产，每份符合标准且 有效的数据和交易都有对应的确权证书。</p>
+                        <button type="button">数据流转追溯</button>
+                        <p>将数据的来源、流向和使用等信息均写入区块链，可以完成数据流转溯源问题。</p>
                     </div>
                     <div>
-                        <button type="button">数据流转追溯</button>
-                        <p>将数据的来源、流向和使用等信息均写入区块链，可以 完成数据流转溯源问题。</p>
+                        <button type="button">数据授权记录</button>
+                        <p>数据拥有者对数据的使用进行授权，并将授权内容进行在区块链，只有获得数据使用授权才能够使用该数据。</p>
                     </div>
                     <div>
                         <button type="button">数据真实可验</button>
-                        <p>对于迅鳐数据，验证者可以利用写入区块链的 hash值对其原始数据进行验证保证数据真实没 被篡改。</p>
+                        <p>对于迅鳐数据，验证者可以利用写入区块链的 hash值对其原始数据进行验证保证数据真实没被篡改。</p>
                     </div>
                 </section>
             </div>
@@ -58,20 +58,20 @@
             </header>
             <ul class="clear">
                 <li class="fl">
-                    <header>金融信贷</header>
-                    <section><div>结合金融信贷行业特点，对各项协议和交易凭证进行存储。</div></section>
+                    <header>重工业交易</header>
+                    <section><div>用区块链服务解决大宗交易的信任危机</div></section>
                 </li>
                 <li class="fl">
-                    <header>众筹业务</header>
-                    <section><div>提供登记资料第三方存证、出资证明及权益证明、合同协议第三方存证。</div></section>
+                    <header>物流货运</header>
+                    <section><div>解决货运中丢失件多，难追踪的问题</div></section>
                 </li>
                 <li class="fl">
-                    <header>医疗业务</header>
-                    <section><div>迅鳐区块链严格权限管理，信息流通全生命周期跟踪，医疗数据更加安全可信</div></section>
+                    <header>生鲜行业</header>
+                    <section><div>提高货品同步数据速率，减少人工错误</div></section>
                 </li>
                 <li class="fl">
-                    <header>钢铁行业</header>
-                    <section><div>传统钢铁行业数据量庞大，信息传递尤其重要，钢铁数据资产得到保障，必定加速整个行业进程</div></section>
+                    <header>医药行业</header>
+                    <section><div>解决药物不能溯源的问题让病患更放心</div></section>
                 </li>
             </ul>
         </div>
@@ -80,16 +80,16 @@
 
 <script>
     import Banner from './components/Banner'
-    import solutionLogo from '~/assets/img/solution/dataAssets/solution_logo.png'
+    import solutionLogo from '~/assets/img/solution/logistics/solution_logo.png'
 
     export default {
-        name: "DataAssets",
+        name: "logistics",
         components: {Banner},
         data() {
             return{
                 solutionLogo : solutionLogo,
-                bannerTitle : '数据资产解决方案',
-                bannerContent : '交易数据全部记录在区块链上，解决数据交易的易泄露，易篡改等问题，保证数据安全和数据分析结果的正确性。'
+                bannerTitle : '物流货运行业解决方案',
+                bannerContent : '迅鳐供物流货运区块链解决方案，通过以物流链为核心打通打通金融链、生产链、仓储链、供应链，实现数据资源能力开放。'
             }
         }
     }
@@ -98,7 +98,7 @@
 <style lang="scss" scoped>
     @import "./css/solution";
     @function imgUrl($path) {
-        @return '../../../assets/img/solution/dataAssets/'+$path;
+        @return '../../../assets/img/solution/logistics/'+$path;
     }
     .function section {
         background: url(imgUrl('function.png')) no-repeat center;

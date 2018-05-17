@@ -10,18 +10,18 @@
                 <ul class="fl">
                     <li class="clear">
                         <strong class="fl">1</strong>
-                        <p class="fr">确权、维权难：数据提供方卖出的数据面临被无限次盗卖、市场价值不断损减的风险，严重制约了数据市场的规模与发展；</p>
+                        <p class="fr">O2O的征信方式导致成本过高。正规市场化数据采集渠道有限，数据源争夺战耗费大量成本。</p>
                     </li>
                     <li class="clear">
                         <strong class="fl">2</strong>
-                        <p class="fr">数据造假：某些数据提供方为获得利益提供造假的数据，根据真实数据扩充伪造的数据量，保证模型拟合性不变，但是伪造的数据会导致数据挖掘的结果错误；</p>
+                        <p class="fr">数据缺乏共享，征信机构与用户信息不对称。征信机构与征信机构、征信机构与其他机构等缺乏有效的共享合作，信息孤岛问题严重，无法实现征信业内高质量的数据流通及交易，造成征信机构与用户信息不对称。过度授信，重复借贷、坏账率居高不下。</p>
                     </li>
                     <li class="clear">
                         <strong class="fl">3</strong>
-                        <p class="fr">需求无法满足：数据价值在企业升级转型中的作用愈加凸显，企业对于专业数据的需求越来越强烈，但企业的这些需求无法得到及时的相应和满足。</p>
+                        <p class="fr">数据隐私保护问题突出，传统技术架构难以满足新要求。大数据时代下的征信业对隐私保护和数据安全的要求更高。正规市场化数据采集渠道有限，数据源争夺战耗费大量成本。</p>
                     </li>
                 </ul>
-                <img class="fr" src="../../../assets/img/solution/dataAssets/overview.png" alt="">
+                <img class="fr" src="../../../assets/img/solution/credit/overview.png" alt="">
             </section>
         </div>
         <div class="function">
@@ -30,7 +30,7 @@
                     <h1>方案概述</h1>
                     <h2>Solution&nbsp;Function</h2>
                 </header>
-                <h1>迅鳐数据资产解决方案提供了可追溯路径，能有效破解数据确权难题。通过网络中多个参与计算的节点来共同参与数据的计算和记录，并且互相验证其信息的有效，既可以进行信息防伪，又提供了可追溯路径。</h1>
+                <h1>征信行业信息孤岛问题严重，无法实现征信业内高质量的数据流通及交易，造成征信机构与用户信息不对称。迅鳐区块链将通过以征 信链为核心打通打通金融链、生产链、物流链、供应链、仓储链，实现数据资源能力开放。</h1>
                 <section>
                     <div>
                         <button type="button">确权证书</button>
@@ -46,7 +46,7 @@
                     </div>
                     <div>
                         <button type="button">数据真实可验</button>
-                        <p>对于迅鳐数据，验证者可以利用写入区块链的 hash值对其原始数据进行验证保证数据真实没 被篡改。</p>
+                        <p>对于迅鳐数据，验证者可以利用写入区块链的 hash值对其原始数据进行验证保证数据真实没被篡改。</p>
                     </div>
                 </section>
             </div>
@@ -58,20 +58,20 @@
             </header>
             <ul class="clear">
                 <li class="fl">
-                    <header>金融信贷</header>
-                    <section><div>结合金融信贷行业特点，对各项协议和交易凭证进行存储。</div></section>
+                    <header>银行业务</header>
+                    <section><div>结合银行的行业特点，对各项协议和交易凭证进行存储。</div></section>
                 </li>
                 <li class="fl">
                     <header>众筹业务</header>
-                    <section><div>提供登记资料第三方存证、出资证明及权益证明、合同协议第三方存证。</div></section>
+                    <section><div>提供登记资料第三方存证、出资、证明及权益证明、合同协议 第三方存证。</div></section>
                 </li>
                 <li class="fl">
-                    <header>医疗业务</header>
-                    <section><div>迅鳐区块链严格权限管理，信息流通全生命周期跟踪，医疗数据更加安全可信</div></section>
+                    <header>劵商业务</header>
+                    <section><div>保全远程开户数据、尽职调查数据、风险提示数据、投资过程数据等。</div></section>
                 </li>
                 <li class="fl">
-                    <header>钢铁行业</header>
-                    <section><div>传统钢铁行业数据量庞大，信息传递尤其重要，钢铁数据资产得到保障，必定加速整个行业进程</div></section>
+                    <header>金融产品</header>
+                    <section><div>解决金融产品信任危机交易更加明确</div></section>
                 </li>
             </ul>
         </div>
@@ -80,16 +80,16 @@
 
 <script>
     import Banner from './components/Banner'
-    import solutionLogo from '~/assets/img/solution/dataAssets/solution_logo.png'
+    import solutionLogo from '~/assets/img/solution/credit/solution_logo.png'
 
     export default {
-        name: "DataAssets",
+        name: "credit",
         components: {Banner},
         data() {
             return{
                 solutionLogo : solutionLogo,
-                bannerTitle : '数据资产解决方案',
-                bannerContent : '交易数据全部记录在区块链上，解决数据交易的易泄露，易篡改等问题，保证数据安全和数据分析结果的正确性。'
+                bannerTitle : '个人/机构征信',
+                bannerContent : '征信机构信息孤岛问题严重，无法实现征信业内高质量的数据流通及交易，造成征信机构与用户信息不对称。'
             }
         }
     }
@@ -98,7 +98,7 @@
 <style lang="scss" scoped>
     @import "./css/solution";
     @function imgUrl($path) {
-        @return '../../../assets/img/solution/dataAssets/'+$path;
+        @return '../../../assets/img/solution/credit/'+$path;
     }
     .function section {
         background: url(imgUrl('function.png')) no-repeat center;

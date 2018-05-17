@@ -10,18 +10,18 @@
                 <ul class="fl">
                     <li class="clear">
                         <strong class="fl">1</strong>
-                        <p class="fr">确权、维权难：数据提供方卖出的数据面临被无限次盗卖、市场价值不断损减的风险，严重制约了数据市场的规模与发展；</p>
+                        <p class="fr">行业分工明细、协同参与方众多导致了汽车行业的数字化进程相对缓慢。汽车行业交易繁多，成交量大，导致业务数据庞大</p>
                     </li>
                     <li class="clear">
                         <strong class="fl">2</strong>
-                        <p class="fr">数据造假：某些数据提供方为获得利益提供造假的数据，根据真实数据扩充伪造的数据量，保证模型拟合性不变，但是伪造的数据会导致数据挖掘的结果错误；</p>
+                        <p class="fr">汽车行业数据分类多，数量庞大，统计和信息同步效率低，人工记录容易产生错误，留下数据漏洞，给企业和客户带来巨大损失</p>
                     </li>
                     <li class="clear">
                         <strong class="fl">3</strong>
-                        <p class="fr">需求无法满足：数据价值在企业升级转型中的作用愈加凸显，企业对于专业数据的需求越来越强烈，但企业的这些需求无法得到及时的相应和满足。</p>
+                        <p class="fr">零件造假很难溯源，二手车市场混乱</p>
                     </li>
                 </ul>
-                <img class="fr" src="../../../assets/img/solution/dataAssets/overview.png" alt="">
+                <img class="fr" src="../../../assets/img/solution/carIndustry/overview.png" alt="">
             </section>
         </div>
         <div class="function">
@@ -30,11 +30,11 @@
                     <h1>方案概述</h1>
                     <h2>Solution&nbsp;Function</h2>
                 </header>
-                <h1>迅鳐数据资产解决方案提供了可追溯路径，能有效破解数据确权难题。通过网络中多个参与计算的节点来共同参与数据的计算和记录，并且互相验证其信息的有效，既可以进行信息防伪，又提供了可追溯路径。</h1>
+                <h1>迅鳐区块链为每一辆汽车建立一个数字档案，并且围绕不同阶段的汽车所有权建立不同的档案权限， 以应对不同的业务场景。用ID来表示汽车，用关联数据来描述汽车的相关档案，用智能合约来描述针对汽车档案的不同操作。</h1>
                 <section>
                     <div>
-                        <button type="button">确权证书</button>
-                        <p>数据作为受保护的虚拟资产，每份符合标准且有效的数 据和交易都有对应的确权证书。</p>
+                        <button type="button">共识算法</button>
+                        <p>迅鳐区块链采用可拔插的共识算法，用户可根据业务场景选择不同的算法。保证数据的统一性，防止双花和恶意系统破坏。</p>
                     </div>
                     <div>
                         <button type="button">数据授权记录</button>
@@ -46,7 +46,7 @@
                     </div>
                     <div>
                         <button type="button">数据真实可验</button>
-                        <p>对于迅鳐数据，验证者可以利用写入区块链的 hash值对其原始数据进行验证保证数据真实没 被篡改。</p>
+                        <p>对于迅鳐数据，验证者可以利用写入区块链的 hash值对其原始数据进行验证保证数据真实没被篡改。</p>
                     </div>
                 </section>
             </div>
@@ -58,20 +58,20 @@
             </header>
             <ul class="clear">
                 <li class="fl">
-                    <header>金融信贷</header>
-                    <section><div>结合金融信贷行业特点，对各项协议和交易凭证进行存储。</div></section>
+                    <header>零售行业</header>
+                    <section><div>提高货品同步数据速率，减少人工错误</div></section>
                 </li>
                 <li class="fl">
-                    <header>众筹业务</header>
-                    <section><div>提供登记资料第三方存证、出资证明及权益证明、合同协议第三方存证。</div></section>
+                    <header>航空行业</header>
+                    <section><div>保障数据的真实性和隐私，使其不被篡改和泄露</div></section>
                 </li>
                 <li class="fl">
-                    <header>医疗业务</header>
-                    <section><div>迅鳐区块链严格权限管理，信息流通全生命周期跟踪，医疗数据更加安全可信</div></section>
+                    <header>地产行业</header>
+                    <section><div>保障大数据的安全，保证财务和隐私安全</div></section>
                 </li>
                 <li class="fl">
-                    <header>钢铁行业</header>
-                    <section><div>传统钢铁行业数据量庞大，信息传递尤其重要，钢铁数据资产得到保障，必定加速整个行业进程</div></section>
+                    <header>零部件行业</header>
+                    <section><div>用区块链服务解决种类繁多的零部件 生产和销售问题</div></section>
                 </li>
             </ul>
         </div>
@@ -80,16 +80,16 @@
 
 <script>
     import Banner from './components/Banner'
-    import solutionLogo from '~/assets/img/solution/dataAssets/solution_logo.png'
+    import solutionLogo from '~/assets/img/solution/carIndustry/solution_logo.png'
 
     export default {
-        name: "DataAssets",
+        name: "car-industry",
         components: {Banner},
         data() {
             return{
                 solutionLogo : solutionLogo,
-                bannerTitle : '数据资产解决方案',
-                bannerContent : '交易数据全部记录在区块链上，解决数据交易的易泄露，易篡改等问题，保证数据安全和数据分析结果的正确性。'
+                bannerTitle : '汽车行业解决方案',
+                bannerContent : '利用区块链技术对汽车行业进行数字化、提高协同工作效率。将每辆汽车的信息存入区块链，用智能合约来描述针对汽车档案的不同操作。'
             }
         }
     }
@@ -98,7 +98,7 @@
 <style lang="scss" scoped>
     @import "./css/solution";
     @function imgUrl($path) {
-        @return '../../../assets/img/solution/dataAssets/'+$path;
+        @return '../../../assets/img/solution/carIndustry/'+$path;
     }
     .function section {
         background: url(imgUrl('function.png')) no-repeat center;

@@ -10,18 +10,18 @@
                 <ul class="fl">
                     <li class="clear">
                         <strong class="fl">1</strong>
-                        <p class="fr">确权、维权难：数据提供方卖出的数据面临被无限次盗卖、市场价值不断损减的风险，严重制约了数据市场的规模与发展；</p>
+                        <p class="fr">传统供应链行业不能支撑如今复杂和地理分散的供应周期的需求。新起的网络供应，问题也繁多，造假难以避免，可信机制不可信</p>
                     </li>
                     <li class="clear">
                         <strong class="fl">2</strong>
-                        <p class="fr">数据造假：某些数据提供方为获得利益提供造假的数据，根据真实数据扩充伪造的数据量，保证模型拟合性不变，但是伪造的数据会导致数据挖掘的结果错误；</p>
+                        <p class="fr">信息共享不畅导致服务质量差,并且存在中间商，让产品无法保证品质和价格，市场价格混乱，让消费者无法体验价廉物美</p>
                     </li>
                     <li class="clear">
                         <strong class="fl">3</strong>
-                        <p class="fr">需求无法满足：数据价值在企业升级转型中的作用愈加凸显，企业对于专业数据的需求越来越强烈，但企业的这些需求无法得到及时的相应和满足。</p>
+                        <p class="fr">很难追踪运输过程中出现得事故，不能高效解决问题。</p>
                     </li>
                 </ul>
-                <img class="fr" src="../../../assets/img/solution/dataAssets/overview.png" alt="">
+                <img class="fr" src="../../../assets/img/solution/supplyChain/overview.png" alt="">
             </section>
         </div>
         <div class="function">
@@ -30,7 +30,7 @@
                     <h1>方案概述</h1>
                     <h2>Solution&nbsp;Function</h2>
                 </header>
-                <h1>迅鳐数据资产解决方案提供了可追溯路径，能有效破解数据确权难题。通过网络中多个参与计算的节点来共同参与数据的计算和记录，并且互相验证其信息的有效，既可以进行信息防伪，又提供了可追溯路径。</h1>
+                <h1>迅鳐区块链将信息同时与整个网络共享，整个平台增强的安全性，更大的透明度，更好的可扩展性，快速的交易，降低成本，和创新。</h1>
                 <section>
                     <div>
                         <button type="button">确权证书</button>
@@ -42,11 +42,11 @@
                     </div>
                     <div>
                         <button type="button">数据流转追溯</button>
-                        <p>将数据的来源、流向和使用等信息均写入区块链，可以 完成数据流转溯源问题。</p>
+                        <p>智能合约自动运行在区块链上，安装在所有节点，所有 节点都可以通过运行智能合约来校验交易的有效性，以达到抗破坏性。</p>
                     </div>
                     <div>
                         <button type="button">数据真实可验</button>
-                        <p>对于迅鳐数据，验证者可以利用写入区块链的 hash值对其原始数据进行验证保证数据真实没 被篡改。</p>
+                        <p>对于迅鳐数据，验证者可以利用写入区块链的 hash值对其原始数据进行验证保证数据真实没被篡改。</p>
                     </div>
                 </section>
             </div>
@@ -58,20 +58,20 @@
             </header>
             <ul class="clear">
                 <li class="fl">
-                    <header>金融信贷</header>
-                    <section><div>结合金融信贷行业特点，对各项协议和交易凭证进行存储。</div></section>
+                    <header>仓储业务</header>
+                    <section><div>以仓储链为核心打通金融链、生产链、物流链、供应链，实现数据资源能力开放</div></section>
                 </li>
                 <li class="fl">
-                    <header>众筹业务</header>
-                    <section><div>提供登记资料第三方存证、出资证明及权益证明、合同协议第三方存证。</div></section>
+                    <header>供应链</header>
+                    <section><div>以供应链为核心打通金融链、生产链、物流链、供应链，实现数据资源能力开放</div></section>
                 </li>
                 <li class="fl">
-                    <header>医疗业务</header>
-                    <section><div>迅鳐区块链严格权限管理，信息流通全生命周期跟踪，医疗数据更加安全可信</div></section>
+                    <header>生鲜销售</header>
+                    <section><div>保证生鲜销售的及时性，整个流程可追溯</div></section>
                 </li>
                 <li class="fl">
-                    <header>钢铁行业</header>
-                    <section><div>传统钢铁行业数据量庞大，信息传递尤其重要，钢铁数据资产得到保障，必定加速整个行业进程</div></section>
+                    <header>电商行业</header>
+                    <section><div>用区块链溯源的技术解决电商造假难追究的问题</div></section>
                 </li>
             </ul>
         </div>
@@ -80,16 +80,16 @@
 
 <script>
     import Banner from './components/Banner'
-    import solutionLogo from '~/assets/img/solution/dataAssets/solution_logo.png'
+    import solutionLogo from '~/assets/img/solution/supplyChain/solution_logo.png'
 
     export default {
-        name: "DataAssets",
+        name: "supply-chain",
         components: {Banner},
         data() {
             return{
                 solutionLogo : solutionLogo,
-                bannerTitle : '数据资产解决方案',
-                bannerContent : '交易数据全部记录在区块链上，解决数据交易的易泄露，易篡改等问题，保证数据安全和数据分析结果的正确性。'
+                bannerTitle : '供应链行业解决方案',
+                bannerContent : '迅鳐供应链区块链解决方案，通过以供应链为核心打通打通金融链、生产链、物流链、仓储链，实现数据资源能力开放，消除中间商，让供应链服务更快，更安全，更有价格优势。'
             }
         }
     }
@@ -98,7 +98,7 @@
 <style lang="scss" scoped>
     @import "./css/solution";
     @function imgUrl($path) {
-        @return '../../../assets/img/solution/dataAssets/'+$path;
+        @return '../../../assets/img/solution/supplyChain/'+$path;
     }
     .function section {
         background: url(imgUrl('function.png')) no-repeat center;
