@@ -8,25 +8,17 @@
                     <li class="fl products">
                         <h1>产品服务</h1>
                         <h2>Products</h2>
-                        <div class="subNav twoLevel clear">
-                            <ol class="fl">
-                                <li>迅鳐BASS平台</li>
-                                <li>数据流通平台</li>
-                            </ol>
-                            <ul class="fl">
-                                <li>大数据安全网关</li>
-                                <li>数据资产防护系统</li>
-                                <li>数字水印系统</li>
-                                <li>RayShield</li>
-                                <li>敏感数据与免泄漏</li>
-                            </ul>
-                        </div>
+                        <SubNav class="subNav" :nav-list="productNav" :has-child="true"/>
                     </li>
                     <li class="fl"><h1>解决方案</h1><h2>Solution</h2></li>
                     <li class="fl"><h1>客户案例</h1><h2>Solution</h2></li>
                     <li class="fl"><h1>演示平台</h1><h2>Solution</h2></li>
                     <li class="fl"><h1>新闻资讯</h1><h2>News</h2></li>
-                    <li class="fl"><h1>关于我们</h1><h2>About&nbsp;Us</h2></li>
+                    <li class="fl">
+                        <h1>关于我们</h1>
+                        <h2>About&nbsp;Us</h2>
+                        <SubNav class="subNav" :nav-list="aboutUsNav" :has-child="false"/>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -56,17 +48,61 @@
 
 <script>
     import VuePerfectScrollbar from 'vue-perfect-scrollbar'
+    import SubNav from '../../components/SubNav'
+    import product_bass from '../../assets/img/subNav/products/bass.png'
+    import product_bass_hover from '../../assets/img/subNav/products/bass_hover.png'
 
     export default {
         name: "platform",
-        components: {VuePerfectScrollbar}
+        components: {VuePerfectScrollbar,SubNav},
+        data() {
+            return{
+                productNav: [
+                    {
+                        name: '迅鳐BASS平台',
+                        src: product_bass,
+                        hoverSrc: product_bass_hover,
+                        child: [
+                            {name: '大数据安全网关',router: '/product_dataSecurity',src: product_bass,hoverSrc: product_bass_hover},
+                            {name: '数据资产防护系统',router: '/product_dataAssets',src: product_bass,hoverSrc: product_bass_hover},
+                            {name: '数字水印系统',router: '/product_watermark',src: product_bass,hoverSrc: product_bass_hover},
+                            {name: 'RayShield',router: '/product_rayShield',src: product_bass,hoverSrc: product_bass_hover},
+                            {name: '敏感数据与免泄漏',router: '/product_sensitive',src: product_bass,hoverSrc: product_bass_hover},
+                        ]
+                    },
+                    {
+                        name: '数据流通平台',
+                        src: product_bass,
+                        hoverSrc: product_bass_hover,
+                        child: [
+                            {name: '大数据安全网关',router: '/product_dataSecurity',src: product_bass,hoverSrc: product_bass_hover},
+                            {name: '数据资产防护系统',router: '/product_dataAssets',src: product_bass,hoverSrc: product_bass_hover},
+                            {name: '数字水印系统',router: '/product_watermark',src: product_bass,hoverSrc: product_bass_hover},
+                            {name: 'RayShield',router: '/product_rayShield',src: product_bass,hoverSrc: product_bass_hover},
+                            {name: '敏感数据与免泄漏',router: '/product_sensitive',src: product_bass,hoverSrc: product_bass_hover},
+                        ]
+                    }
+                ],
+                aboutUsNav: [
+                    {
+                        name: '企业介绍',
+                        src: product_bass,
+                        hoverSrc: product_bass_hover,
+                        router: '/aboutUs_introduce'
+                    },
+                    {
+                        name: '招贤纳士',
+                        src: product_bass,
+                        hoverSrc: product_bass_hover,
+                        router: '/aboutUs_jobs'
+                    }
+                ]
+            }
+        }
     }
 </script>
 
 <style lang="scss" scoped>
-    @function imgUrl($path) {
-        @return '../../assets/img/subNav/products/'+$path;
-    }
     #platform{
         height: 100%;
         .header {
@@ -92,60 +128,19 @@
                         font-size: 12px;
                         cursor: pointer;
                     }
+                    .subNav{
+                        display: none;
+                    }
+                    &:hover{
+                        .subNav{
+                            display: block;
+                        }
+                    }
                     &:hover,&.current{
                         h1,h2{
                             color: #2e95ee;
                         }
                     }
-                    .subNav{
-                        position: absolute;
-                        top: 80px;
-                        z-index: 100;
-                        background-color: #fff;
-                        box-shadow: 0 0 35px rgba(255, 255, 255, 0.68);
-                        border-radius: 5px;
-                        padding: 16px;
-                        border: 1px solid #d7d7d7;
-                        &.twoLevel{
-                            width: 321px;
-                        }
-                        &.oneLevel{
-                            width: 160px;
-                        }
-                        ul{
-                            border-left: 1px solid #d7d7d7;
-                        }
-                        li{
-                            width: 120px;
-                            text-align: left;
-                            height: 36px;
-                            line-height: 36px;
-                            padding:0 0 0 40px;
-                            cursor: pointer;
-                            &:hover{
-                                background-color: #f2f2f2!important;
-                            }
-                        }
-                    }
-                    &.products .subNav{
-                        ol{
-                            li:nth-child(1){
-                                background: url(imgUrl('bass.png')) no-repeat 10px center;
-                                &:hover{
-                                    background: url(imgUrl('bass_hover.png')) no-repeat 10px center;
-                                    color: #2e95ee;
-                                }
-                            }
-                            li:nth-child(2){
-                                background: url(imgUrl('circulation.png')) no-repeat 10px center;
-                                &:hover{
-                                    background: url(imgUrl('circulation_hover.png')) no-repeat 10px center;
-                                    color: #2e95ee;
-                                }
-                            }
-                        }
-                    }
-
                 }
             }
         }

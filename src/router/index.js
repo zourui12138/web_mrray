@@ -4,16 +4,16 @@ import Router from 'vue-router'
 // 官网展示
 import Platform from '../modules/platform/Platform'
 // 官网展示-->产品
-import Products_Watermark from '../modules/platform/products/Watermark'
-import Products_Sensitive from '../modules/platform/products/Sensitive'
-import Products_RayShield from '../modules/platform/products/RayShield'
-import Products_DataSecurity from '../modules/platform/products/DataSecurity'
-import Products_DataAssets from '../modules/platform/products/DataAssets'
-import Products_CapacityShareBlockChain from '../modules/platform/products/CapacityShareBlockChain'
-import Products_GovernmentBlockChain from '../modules/platform/products/GovernmentBlockChain'
-import Products_MedicalBlockChain from '../modules/platform/products/MedicalBlockChain'
-import Products_StorageBlockChain from '../modules/platform/products/StorageBlockChain'
-import Products_DataCirculation from '../modules/platform/products/DataCirculation'
+import Product_Watermark from '../modules/platform/products/Watermark'
+import Product_Sensitive from '../modules/platform/products/Sensitive'
+import Product_RayShield from '../modules/platform/products/RayShield'
+import Product_DataSecurity from '../modules/platform/products/DataSecurity'
+import Product_DataAssets from '../modules/platform/products/DataAssets'
+import Product_CapacityShareBlockChain from '../modules/platform/products/CapacityShareBlockChain'
+import Product_GovernmentBlockChain from '../modules/platform/products/GovernmentBlockChain'
+import Product_MedicalBlockChain from '../modules/platform/products/MedicalBlockChain'
+import Product_StorageBlockChain from '../modules/platform/products/StorageBlockChain'
+import Product_DataCirculation from '../modules/platform/products/DataCirculation'
 //官网解决方案
 import Solution_DataAssets from '../modules/platform/solution/DataAssets'
 import Solution_CarIndustry from '../modules/platform/solution/CarIndustry'
@@ -40,54 +40,54 @@ export default new Router({
             children: [
                 // 产品
                 {
-                    path: '/products_watermark',
-                    name: 'products_watermark',
-                    component: Products_Watermark
+                    path: '/product_watermark',
+                    name: 'product_watermark',
+                    component: Product_Watermark
                 },
                 {
-                    path: '/products_sensitive',
-                    name: 'products_sensitive',
-                    component: Products_Sensitive
+                    path: '/product_sensitive',
+                    name: 'product_sensitive',
+                    component: Product_Sensitive
                 },
                 {
-                    path: '/products_rayShield',
-                    name: 'products_rayShield',
-                    component: Products_RayShield
+                    path: '/product_rayShield',
+                    name: 'product_rayShield',
+                    component: Product_RayShield
                 },
                 {
-                    path: '/products_dataSecurity',
-                    name: 'products_dataSecurity',
-                    component: Products_DataSecurity
+                    path: '/product_dataSecurity',
+                    name: 'product_dataSecurity',
+                    component: Product_DataSecurity
                 },
                 {
-                    path: '/products_dataAssets',
-                    name: 'products_dataAssets',
-                    component: Products_DataAssets
+                    path: '/product_dataAssets',
+                    name: 'product_dataAssets',
+                    component: Product_DataAssets
                 },
                 {
-                    path: '/products_capacityShareBlockChain',
-                    name: 'products_capacityShareBlockChain',
-                    component: Products_CapacityShareBlockChain
+                    path: '/product_capacityShareBlockChain',
+                    name: 'product_capacityShareBlockChain',
+                    component: Product_CapacityShareBlockChain
                 },
                 {
-                    path: '/products_governmentBlockChain',
-                    name: 'products_governmentBlockChain',
-                    component: Products_GovernmentBlockChain
+                    path: '/product_governmentBlockChain',
+                    name: 'product_governmentBlockChain',
+                    component: Product_GovernmentBlockChain
                 },
                 {
-                    path: '/products_medicalBlockChain',
-                    name: 'products_medicalBlockChain',
-                    component: Products_MedicalBlockChain
+                    path: '/product_medicalBlockChain',
+                    name: 'product_medicalBlockChain',
+                    component: Product_MedicalBlockChain
                 },
                 {
-                    path: '/products_storageBlockChain',
-                    name: 'products_storageBlockChain',
-                    component: Products_StorageBlockChain
+                    path: '/product_storageBlockChain',
+                    name: 'product_storageBlockChain',
+                    component: Product_StorageBlockChain
                 },
                 {
-                    path: '/products_dataCirculation',
-                    name: 'products_dataCirculation',
-                    component: Products_DataCirculation
+                    path: '/product_dataCirculation',
+                    name: 'product_dataCirculation',
+                    component: Product_DataCirculation
                 },
 				//解决方案
                 {
@@ -133,13 +133,13 @@ export default new Router({
                 },
                 // 关于我们
                 {
-                    path: '/about_jobs',
-                    name: 'about_jobs',
+                    path: '/aboutUs_jobs',
+                    name: 'aboutUs_jobs',
                     component: AboutUs_Jobs
                 },
                 {
-                    path: '/about_introduce',
-                    name: 'about_introduce',
+                    path: '/aboutUs_introduce',
+                    name: 'aboutUs_introduce',
                     component: AboutUs_Introduce
                 }
             ]
