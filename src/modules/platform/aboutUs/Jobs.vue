@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="banner"><div></div></div>
+        <div class="banner"><img src="../../../assets/img/aboutUs/jobs/banner.png" alt=""></div>
         <div class="department commonWidth">
             <button type="button" class="current">研发部</button><button type="button">产品部</button>
         </div>
@@ -40,14 +40,11 @@
         @return '../../../assets/img/aboutUs/jobs/'+$path;
     }
     .banner{
-        height:144px;
-        padding-top: 56px;
-        background: url(imgUrl('banner.png')) no-repeat center;
-        div{
-            width:256px;
-            height:87px;
-            background: url(imgUrl('bannerContent.png')) no-repeat center;
-            margin:auto;
+        height:268px;
+        padding-top: 132px;
+        background: url(imgUrl('banner_bg.png')) no-repeat center;
+        text-align: center;
+        img{
             animation-name: zoomInLeft;
             animation-duration: 1s;
         }

@@ -45,7 +45,6 @@
 <style lang="scss" scoped>
     .style{
         background-color: #fff;
-        box-shadow: 0 0 35px rgba(255, 255, 255, 0.68);
         border-radius: 5px;
         border: 1px solid #d7d7d7;
     }
@@ -57,7 +56,7 @@
         ul{
             @extend .style;
             li.subNavBox{
-                width: 160px;
+                width: 170px;
                 text-align: left;
                 height: 35px;
                 line-height: 35px;
@@ -65,7 +64,7 @@
                 font-size: 14px;
                 position: relative;
                 img{
-                    margin:7px 10px;
+                    margin:7px;
                     &.normal{
                         display: inline-block;
                     }
@@ -77,7 +76,7 @@
                     position: absolute;
                     z-index: 100;
                     top: 0;
-                    right: -167px;
+                    right: -176px;
                     display: none;
                     padding-left: 5px;
                     ol{

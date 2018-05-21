@@ -103,8 +103,8 @@
         @return '../../../assets/img/news/'+$path;
     }
     .banner{
-        height: 144px;
-        padding-top: 56px;
+        height:268px;
+        padding-top: 132px;
         background: url(imgUrl('banner_bg.png')) no-repeat center;
         text-align: center;
         img{

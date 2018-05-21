@@ -18,33 +18,30 @@
             let camera,// 相机
                 scene,// 场景
                 renderer,// 渲染对象
-                SEPARATION = 100,// 间距
-                AMOUNTX = 50,// X方向的数量
-                AMOUNTY = 50,// Y方向的数量
+                SEPARATION = 90,// 间距
+                AMOUNTX = 60,// X方向的数量
+                AMOUNTY = 60,// Y方向的数量
                 particle,// 精灵对象
                 particles = [],// 精灵对象的集合
-                mouseX = 0,
-                mouseY = 0,
                 count = 0;
             let onWindowResize = () => {
                 camera.aspect = window.innerWidth / 400;
                 camera.updateProjectionMatrix();
                 renderer.setSize( window.innerWidth, 400 );
             };
-            let onDocumentMouseMove = ( event ) => {
-                mouseX = event.clientX - window.innerWidth / 2;
-            };
             let init = () => {
                 // 创建相机
                 camera = new PerspectiveCamera( 75, window.innerWidth / 400, 1, 10000 );
-                camera.position.z = 1000;
+                camera.position.z = 2500;
+                camera.position.y = 200;
+                camera.position.x = -500;
                 // 创建场景
                 scene = new Scene();
                 // 创建纹理
                 let textureLoader = new TextureLoader();
                 let map = textureLoader.load('./static/img/ball.png');
                 // 创建精灵材质
-                let material = new SpriteMaterial( {map: map} );
+                let material = new SpriteMaterial();
                 // 创建精灵元素
                 let i = 0;
                 for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
@@ -63,17 +60,12 @@
                 this.$refs.wave.appendChild( renderer.domElement );
                 // 绑定屏幕变化事件
                 window.addEventListener( 'resize', onWindowResize, false );
-                // 绑定鼠标移入事件
-                this.$refs.wave.addEventListener( 'mousemove', onDocumentMouseMove, false );
             };
             let animate = () => {
                 requestAnimationFrame( animate );
                 render();
             };
             let render = () => {
-                camera.position.x += ( mouseX - camera.position.x ) * .05;
-                camera.position.y += ( - mouseY - camera.position.y ) * .05;
-                camera.lookAt(scene.position);
                 let i = 0;
                 for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
                     for ( let iy = 0; iy < AMOUNTY; iy ++ ) {

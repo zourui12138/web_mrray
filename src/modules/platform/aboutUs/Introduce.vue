@@ -277,7 +277,7 @@
     .banner{
         height:335px;
         padding-top: 95px;
-        background: url(imgUrl('banner.png')) no-repeat center;
+        background: url(imgUrl('banner_bg.png')) no-repeat center;
         .banner_right{
             width:415px;
             height:250px;
