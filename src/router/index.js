@@ -3,6 +3,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // 官网展示
 import Platform from '../modules/platform/Platform'
+// 官网展示-->首页
+import Home from '../modules/platform/home/Home'
 // 官网展示-->产品
 import Product_Watermark from '../modules/platform/products/Watermark'
 import Product_Sensitive from '../modules/platform/products/Sensitive'
@@ -33,11 +35,22 @@ Vue.use(Router);
 
 export default new Router({
     routes: [
+        // 重定向
+        {
+            path: '/',
+            redirect: '/home'
+        },
         {
             path: '/',
             name: 'platform',
             component: Platform,
             children: [
+                // 首页
+                {
+                    path: '/home',
+                    name: 'home',
+                    component: Home
+                },
                 // 产品
                 {
                     path: '/product_watermark',

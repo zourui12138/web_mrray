@@ -4,7 +4,7 @@
             <div class="commonWidth clear">
                 <img src="../../assets/img/logo.png" alt="" class="fl">
                 <ul class="fr">
-                    <li class="fl" :class="currentNav === 'home' ? 'current' : ''"><h1>首页</h1><h2>Home</h2></li>
+                    <li class="fl" :class="currentNav === 'home' ? 'current' : ''" @click="href('/home')"><h1>首页</h1><h2>Home</h2></li>
                     <li class="fl" :class="currentNav === 'product' ? 'current' : ''">
                         <h1>产品服务</h1>
                         <h2>Products</h2>
@@ -31,7 +31,7 @@
             </div>
         </header>
         <VuePerfectScrollbar v-scroll class="main">
-            <router-view/>
+            <keep-alive><router-view/></keep-alive>
             <footer class="footer">
                 <div class="commonWidth clear">
                     <ul class="fl">

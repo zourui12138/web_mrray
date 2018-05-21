@@ -56,6 +56,7 @@
                 </header>
                 <section>
                     <el-carousel
+                        class="introduce_carousel"
                         :autoplay="false"
                         trigger="click"
                         arrow="never"
@@ -461,15 +462,17 @@
 </style>
 
 <style lang="scss">
-    .el-carousel__indicators{
-        display: none;
-    }
-    .el-carousel__mask{
-        display: none;
-    }
-    .el-carousel__item--card.is-active{
-        h1,h2{
-            color: #2e95ee;
+    .introduce_carousel{
+        .el-carousel__indicators{
+            display: none;
+        }
+        .el-carousel__mask{
+            display: none;
+        }
+        .el-carousel__item--card.is-active{
+            h1,h2{
+                color: #2e95ee;
+            }
         }
     }
 </style>

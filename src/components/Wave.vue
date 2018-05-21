@@ -1,5 +1,5 @@
 <template>
-    <div class="wave" ref="wave"></div>
+    <div class="wave" ref="wave" :style="{height: waveHeight+'px'}"></div>
 </template>
 
 <script>
@@ -14,6 +14,7 @@
 
     export default {
         name: "wave",
+        props: ['waveHeight'],
         mounted() {
             let camera,// 相机
                 scene,// 场景
@@ -23,15 +24,16 @@
                 AMOUNTY = 60,// Y方向的数量
                 particle,// 精灵对象
                 particles = [],// 精灵对象的集合
-                count = 0;
+                count = 0,
+                timer = null;
             let onWindowResize = () => {
-                camera.aspect = window.innerWidth / 400;
+                camera.aspect = window.innerWidth / this.waveHeight;
                 camera.updateProjectionMatrix();
-                renderer.setSize( window.innerWidth, 400 );
+                renderer.setSize( window.innerWidth, this.waveHeight );
             };
             let init = () => {
                 // 创建相机
-                camera = new PerspectiveCamera( 75, window.innerWidth / 400, 1, 10000 );
+                camera = new PerspectiveCamera( 75, window.innerWidth / this.waveHeight, 1, 10000 );
                 camera.position.z = 2500;
                 camera.position.y = 200;
                 camera.position.x = -500;
@@ -55,14 +57,14 @@
                 // 创建渲染对象
                 renderer = new WebGLRenderer({ alpha: true });
                 renderer.setPixelRatio( window.devicePixelRatio );
-                renderer.setSize( window.innerWidth, 400 );
+                renderer.setSize( window.innerWidth, this.waveHeight );
                 // 将渲染对象中的canvas挂载到目标节点上
                 this.$refs.wave.appendChild( renderer.domElement );
                 // 绑定屏幕变化事件
                 window.addEventListener( 'resize', onWindowResize, false );
             };
             let animate = () => {
-                requestAnimationFrame( animate );
+                timer = requestAnimationFrame( animate );
                 render();
             };
             let render = () => {
@@ -80,11 +82,16 @@
                 count += 0.1;
             };
             init();
+            console.log(timer);
+            timer && cancelAnimationFrame(timer);
             animate();
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .wave{height: 400px;}
+    .wave{
+        position: absolute;
+        bottom: 0;
+    }
 </style>

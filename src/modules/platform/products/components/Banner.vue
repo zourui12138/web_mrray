@@ -1,6 +1,6 @@
 <template>
     <div class="banner">
-        <Wave class="wave"/>
+        <Wave class="wave" :waveHeight="400"/>
         <div class="commonWidth">
             <div class="productIntroduce">
                 <h1 :style="{background : 'url('+ productLogo +') no-repeat 0 center'}">{{bannerTitle}}</h1>
@@ -29,10 +29,6 @@
         height:400px;
         background: url(imgUrl('banner.png')) no-repeat center;
         position: relative;
-        .wave{
-            position: absolute;
-            top: 0;
-        }
         .productIntroduce{
             width:600px;
             color: #fff;
