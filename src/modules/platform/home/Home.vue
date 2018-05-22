@@ -453,6 +453,8 @@
         .bannerContent{
             position: relative;
             z-index: 10;
+            animation-name: zoomInLeft;
+            animation-duration: 1s;
             h1{
                 font-size: 50px;
                 font-weight: bold;
