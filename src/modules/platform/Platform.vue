@@ -15,7 +15,7 @@
                         <h2>Solution</h2>
                         <SubNav class="subNav" :nav-list="solutionNav"/>
                     </li>
-                    <li class="fl">
+                    <li class="fl" :class="currentNav === 'case' ? 'current' : ''">
                         <h1>客户案例</h1>
                         <h2>Solution</h2>
                         <SubNav class="subNav" :nav-list="caseNav"/>
@@ -31,7 +31,7 @@
             </div>
         </header>
         <VuePerfectScrollbar v-scroll class="main">
-            <keep-alive><router-view/></keep-alive>
+            <router-view/>
             <footer class="footer">
                 <div class="commonWidth clear">
                     <ul class="fl">
@@ -115,19 +115,19 @@
                         name: '积微仓储区块链',
                         src: product_bass,
                         hoverSrc: product_bass_hover,
-                        router: null
+                        router: '/case_storageBlockChain'
                     },
                     {
                         name: '运力共享区块链',
                         src: product_bass,
                         hoverSrc: product_bass_hover,
-                        router: null
+                        router: '/case_capacityShareBlockChain'
                     },
                     {
                         name: '政务区块链',
                         src: product_bass,
                         hoverSrc: product_bass_hover,
-                        router: null
+                        router: '/case_governmentBlockChain'
                     }
                 ],
                 aboutUsNav: [
@@ -168,6 +168,9 @@
                     case 'solution_financial' : navName = 'solution';break;
                     case 'solution_logistics' : navName = 'solution';break;
                     case 'solution_supplyChain' : navName = 'solution';break;
+                    case 'case_capacityShareBlockChain' : navName = 'case';break;
+                    case 'case_governmentBlockChain' : navName = 'case';break;
+                    case 'case_storageBlockChain' : navName = 'case';break;
                     case 'news' : navName = 'news';break;
                     case 'aboutUs_jobs' : navName = 'aboutUs';break;
                     case 'aboutUs_introduce' : navName = 'aboutUs';break;

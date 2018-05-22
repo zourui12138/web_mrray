@@ -15,6 +15,11 @@
     export default {
         name: "wave",
         props: ['waveHeight'],
+        data() {
+            return{
+                timer: null
+            }
+        },
         mounted() {
             let camera,// 相机
                 scene,// 场景
@@ -24,8 +29,7 @@
                 AMOUNTY = 60,// Y方向的数量
                 particle,// 精灵对象
                 particles = [],// 精灵对象的集合
-                count = 0,
-                timer = null;
+                count = 0;
             let onWindowResize = () => {
                 camera.aspect = window.innerWidth / this.waveHeight;
                 camera.updateProjectionMatrix();
@@ -64,7 +68,7 @@
                 window.addEventListener( 'resize', onWindowResize, false );
             };
             let animate = () => {
-                timer = requestAnimationFrame( animate );
+                this.timer = requestAnimationFrame( animate );
                 render();
             };
             let render = () => {
@@ -82,9 +86,11 @@
                 count += 0.1;
             };
             init();
-            console.log(timer);
-            timer && cancelAnimationFrame(timer);
             animate();
+        },
+        beforeDestroy() {
+            // 必须在组件销毁以前调用，以免重复绘制，导致页面变卡
+            cancelAnimationFrame(this.timer);
         }
     }
 </script>

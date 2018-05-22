@@ -16,7 +16,7 @@ import Product_GovernmentBlockChain from '../modules/platform/products/Governmen
 import Product_MedicalBlockChain from '../modules/platform/products/MedicalBlockChain'
 import Product_StorageBlockChain from '../modules/platform/products/StorageBlockChain'
 import Product_DataCirculation from '../modules/platform/products/DataCirculation'
-//官网解决方案
+// 官网展示-->解决方案
 import Solution_DataAssets from '../modules/platform/solution/DataAssets'
 import Solution_CarIndustry from '../modules/platform/solution/CarIndustry'
 import Solution_Circulation from '../modules/platform/solution/Circulation'
@@ -24,6 +24,10 @@ import Solution_Credit from '../modules/platform/solution/Credit'
 import Solution_Financial from '../modules/platform/solution/Financial'
 import Solution_Logistics from '../modules/platform/solution/Logistics'
 import Solution_SupplyChain from '../modules/platform/solution/SupplyChain'
+// 官网展示-->客户案例
+import Case_CapacityShareBlockChain from '../modules/platform/case/CapacityShareBlockChain'
+import Case_GovernmentBlockChain from '../modules/platform/case/GovernmentBlockChain'
+import Case_StorageBlockChain from '../modules/platform/case/StorageBlockChain'
 // 官网展示-->新闻咨询
 import News from '../modules/platform/news/News'
 // 官网展示-->关于我们
@@ -137,6 +141,22 @@ export default new Router({
                     path: '/solution_supplyChain',
                     name: 'solution_supplyChain',
                     component: Solution_SupplyChain
+                },
+                // 客户案例
+                {
+                    path: '/case_capacityShareBlockChain',
+                    name: 'case_capacityShareBlockChain',
+                    component: Case_CapacityShareBlockChain
+                },
+                {
+                    path: '/case_governmentBlockChain',
+                    name: 'case_governmentBlockChain',
+                    component: Case_GovernmentBlockChain
+                },
+                {
+                    path: '/case_storageBlockChain',
+                    name: 'case_storageBlockChain',
+                    component: Case_StorageBlockChain
                 },
                 // 新闻咨询
                 {

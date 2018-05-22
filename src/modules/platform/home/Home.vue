@@ -1,10 +1,12 @@
 <template>
     <div>
         <div class="banner">
-            <h1>迅鳐区块链让交易更放心</h1>
-            <p>突破信息孤岛，信息真实可验</p>
-            <p>减少人工浪费，加强联盟链，让信息传播更快存储更安全</p>
-            <button type="button">联系我们</button>
+            <div class="bannerContent">
+                <h1>迅鳐区块链让交易更放心</h1>
+                <p>突破信息孤岛，信息真实可验</p>
+                <p>减少人工浪费，加强联盟链，让信息传播更快存储更安全</p>
+                <button type="button">联系我们</button>
+            </div>
             <Wave class="wave" :waveHeight="606"/>
         </div>
         <div class="precipitation commonWidth clear">
@@ -183,9 +185,13 @@
         </div>
         <div class="solution">
             <div class="commonWidth">
-                <header class="title">
+                <!--<header class="title">-->
+                    <!--<h1>解决方案</h1>-->
+                    <!--<h2>Cooperation&nbsp;Partner</h2>-->
+                <!--</header>-->
+                <header>
                     <h1>解决方案</h1>
-                    <h2>Cooperation&nbsp;Partner</h2>
+                    <p>迅鳐Bass平台提供区块链技术服务解决方案，根据各行业痛点和企业需求构建符合时代发展的平台系统</p>
                 </header>
             </div>
             <section>
@@ -381,7 +387,7 @@
         }
     }
     .products{
-        background-color: #2e95ee;
+        background-color: #00183e;
         color: #fff;
         .products_content{
             width: 600px;
@@ -432,28 +438,32 @@
         color: #fff;
         background: url(imgUrl('banner.png')) no-repeat center;
         position: relative;
-        h1{
-            font-size: 50px;
-            font-weight: bold;
-            height: 80px;
-            line-height: 80px;
-        }
-        p{
-            font-size: 20px;
-            height: 50px;
-            line-height: 50px;
-        }
-        button{
-            width: 200px;
-            height: 60px;
-            line-height: 60px;
-            border-radius: 15px;
-            color: #fff;
-            font-size: 18px;
-            text-align: center;
-            margin-top: 10px;
-            background: #2e95ee;
-            cursor: pointer;
+        .bannerContent{
+            position: relative;
+            z-index: 10;
+            h1{
+                font-size: 50px;
+                font-weight: bold;
+                height: 80px;
+                line-height: 80px;
+            }
+            p{
+                font-size: 20px;
+                height: 50px;
+                line-height: 50px;
+            }
+            button{
+                width: 200px;
+                height: 60px;
+                line-height: 60px;
+                border-radius: 15px;
+                color: #fff;
+                font-size: 18px;
+                text-align: center;
+                margin-top: 10px;
+                background: #2e95ee;
+                cursor: pointer;
+            }
         }
     }
     .precipitation{
@@ -531,6 +541,21 @@
         @extend .products;
     }
     .solution{
+        header{
+            text-align: center;
+            padding-top: 50px;
+            h1{
+                font-size: 30px;
+                font-weight: bold;
+                height: 50px;
+                line-height: 50px;
+            }
+            p{
+                line-height: 30px;
+                height: 30px;
+                font-size: 14px;
+            }
+        }
         section{
             width: 100%;
             overflow: hidden;
