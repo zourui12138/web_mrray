@@ -12,7 +12,7 @@
         <div class="precipitation commonWidth clear">
             <ul class="fl">
                 <li class="clear">
-                    <div class="precipitation_logo fl"><div><img src="../../../assets/img/home/precipitation3.png" alt=""></div></div>
+                    <div class="precipitation_logo fl"><div><img src="../../../assets/img/home/precipitation1.png" alt=""></div></div>
                     <div class="precipitation_content fl">
                         <h1>主权区块链技术蓝皮书</h1>
                         <p>2017年5月27日</p>
@@ -28,9 +28,9 @@
                     </div>
                 </li>
             </ul>
-            <ol class="fr">
+            <ul class="fr">
                 <li class="clear">
-                    <div class="precipitation_logo fl"><div><img src="../../../assets/img/home/precipitation3.png" alt=""></div></div>
+                    <div class="precipitation_logo fl"><div><img src="../../../assets/img/home/precipitation2.png" alt=""></div></div>
                     <div class="precipitation_content fl">
                         <h1>区块链专利TOP100</h1>
                         <p>2017年迅鳐专利</p>
@@ -38,56 +38,57 @@
                     </div>
                 </li>
                 <li class="clear">
-                    <div class="precipitation_logo fl"><div><img src="../../../assets/img/home/precipitation3.png" alt=""></div></div>
+                    <div class="precipitation_logo fl"><div><img src="../../../assets/img/home/precipitation4.png" alt=""></div></div>
                     <div class="precipitation_content fl">
                         <h1>区块链技术与应用产业联盟</h1>
                         <p>2017年5月27日</p>
                         <p>联合成立贵阳区块链技术与应用产业联盟</p>
                     </div>
                 </li>
-            </ol>
+            </ul>
         </div>
         <div class="bass">
             <div class="commonWidth clear">
                 <div class="products_content fl">
                     <h1>迅鳐Bass平台&nbsp;—&nbsp;快速构建、开箱即用</h1>
                     <h2>迅鳐区块链服务Baas平台，构建于迅鳐数据哨兵基础上。平台系统不仅符合大数据安全防护的标准，同时还能提供 多行业的解决方案和平台产品，用户在弹性、开放的Baas平台上能够快速构建自己的IT基础设施和区块链服务</h2>
+                    <h3>Bass产品服务</h3>
                     <ul class="clear">
                         <li class="fl">
                             <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
                             <p>政务区块链平台</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
+                            <div><div><img src="../../../assets/img/home/bass_capacityShareBlockChain.png" alt=""></div></div>
                             <p>运力共享区块链</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
+                            <div><div><img src="../../../assets/img/home/bass_storageBlockChain.png" alt=""></div></div>
                             <p>仓储区块链平台</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
+                            <div><div><img src="../../../assets/img/home/bass_medicalBlockChain.png" alt=""></div></div>
                             <p>医疗区块链平台</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
+                            <div><div><img src="../../../assets/img/home/bass_sensitive.png" alt=""></div></div>
                             <p>敏感数据与免泄露</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
+                            <div><div><img src="../../../assets/img/home/bass_watermark.png" alt=""></div></div>
                             <p>数字水印系统</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
+                            <div><div><img src="../../../assets/img/home/bass_dataSecurity.png" alt=""></div></div>
                             <p>大数据安全网关</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
+                            <div><div><img src="../../../assets/img/home/bass_dataAssets.png" alt=""></div></div>
                             <p>数据资产防护系统</p>
                         </li>
                     </ul>
                 </div>
-                <div class="products_banner fr"><div></div></div>
+                <div class="products_banner fr"></div>
             </div>
         </div>
         <div class="advantage commonWidth">
@@ -105,36 +106,36 @@
                 </li>
                 <li class="fl">
                     <div>
-                        <h1><img src="../../../assets/img/home/bass_advantage_1.png" alt=""></h1>
-                        <h2>数据安全</h2>
+                        <h1><img src="../../../assets/img/home/bass_advantage_2.png" alt=""></h1>
+                        <h2>快速构建</h2>
                         <p>保障客户数据安全保障客户数据安全保障客户数据安全</p>
                     </div>
                 </li>
                 <li class="fl">
                     <div>
-                        <h1><img src="../../../assets/img/home/bass_advantage_1.png" alt=""></h1>
-                        <h2>数据安全</h2>
+                        <h1><img src="../../../assets/img/home/bass_advantage_3.png" alt=""></h1>
+                        <h2>管理可视化</h2>
                         <p>保障客户数据安全保障客户数据安全保障客户数据安全</p>
                     </div>
                 </li>
                 <li class="fl">
                     <div>
-                        <h1><img src="../../../assets/img/home/bass_advantage_1.png" alt=""></h1>
-                        <h2>数据安全</h2>
+                        <h1><img src="../../../assets/img/home/bass_advantage_4.png" alt=""></h1>
+                        <h2>开放平台</h2>
                         <p>保障客户数据安全保障客户数据安全保障客户数据安全</p>
                     </div>
                 </li>
                 <li class="fl">
                     <div>
-                        <h1><img src="../../../assets/img/home/bass_advantage_1.png" alt=""></h1>
-                        <h2>数据安全</h2>
+                        <h1><img src="../../../assets/img/home/bass_advantage_5.png" alt=""></h1>
+                        <h2>场景应用广</h2>
                         <p>保障客户数据安全保障客户数据安全保障客户数据安全</p>
                     </div>
                 </li>
                 <li class="fl">
                     <div>
-                        <h1><img src="../../../assets/img/home/bass_advantage_1.png" alt=""></h1>
-                        <h2>数据安全</h2>
+                        <h1><img src="../../../assets/img/home/bass_advantage_6.png" alt=""></h1>
+                        <h2>贪心介入</h2>
                         <p>保障客户数据安全保障客户数据安全保障客户数据安全</p>
                     </div>
                 </li>
@@ -143,44 +144,45 @@
         <div class="circulation">
             <div class="commonWidth clear">
                 <div class="products_content fr">
-                    <h1>迅鳐Bass平台&nbsp;—&nbsp;快速构建、开箱即用</h1>
-                    <h2>迅鳐区块链服务Baas平台，构建于迅鳐数据哨兵基础上。平台系统不仅符合大数据安全防护的标准，同时还能提供 多行业的解决方案和平台产品，用户在弹性、开放的Baas平台上能够快速构建自己的IT基础设施和区块链服务</h2>
+                    <h1>迅鳐数据流通平台&nbsp;—&nbsp;流通安全保障</h1>
+                    <h2>迅鳐数据流通平台，构建于迅鳐区块链技术基础上，平台系统不仅符合大数据流通服务的行业标准，同时还能提供数据流通的安全环境，数据只能在环境中使用，无法拷出或上传，同时操作记录实时监控，且全部上链，强力保障双方的权益</h2>
+                    <h3>数据流通平台特色</h3>
                     <ul class="clear">
                         <li class="fl">
                             <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
-                            <p>政务区块链平台</p>
+                            <p>提供安全环境</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
-                            <p>运力共享区块链</p>
+                            <div><div><img src="../../../assets/img/home/bass_capacityShareBlockChain.png" alt=""></div></div>
+                            <p>操作实时监控</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
-                            <p>仓储区块链平台</p>
+                            <div><div><img src="../../../assets/img/home/bass_storageBlockChain.png" alt=""></div></div>
+                            <p>重要信息上链</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
-                            <p>医疗区块链平台</p>
+                            <div><div><img src="../../../assets/img/home/bass_medicalBlockChain.png" alt=""></div></div>
+                            <p>平台安全可信</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
-                            <p>敏感数据与免泄露</p>
+                            <div><div><img src="../../../assets/img/home/bass_sensitive.png" alt=""></div></div>
+                            <p>远程操作便捷</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
-                            <p>数字水印系统</p>
+                            <div><div><img src="../../../assets/img/home/bass_watermark.png" alt=""></div></div>
+                            <p>低成本高效率</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
-                            <p>大数据安全网关</p>
+                            <div><div><img src="../../../assets/img/home/bass_dataSecurity.png" alt=""></div></div>
+                            <p>去中心化</p>
                         </li>
                         <li class="fl">
-                            <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
-                            <p>数据资产防护系统</p>
+                            <div><div><img src="../../../assets/img/home/bass_dataAssets.png" alt=""></div></div>
+                            <p>提供操作指导</p>
                         </li>
                     </ul>
                 </div>
-                <div class="products_banner fl"><div></div></div>
+                <div class="products_banner fl"></div>
             </div>
         </div>
         <div class="solution">
@@ -391,7 +393,7 @@
         color: #fff;
         .products_content{
             width: 600px;
-            padding: 25px 0;
+            padding: 50px 0;
             h1{
                 height: 80px;
                 line-height: 80px;
@@ -400,7 +402,13 @@
             }
             h2{
                 line-height: 30px;
-                text-indent: 2em;
+            }
+            h3{
+                height: 80px;
+                line-height: 80px;
+                font-size: 30px;
+                color: #2e95ee;
+                margin-top: 10px;
             }
             p{
                 line-height: 30px;
@@ -408,7 +416,7 @@
             }
             ul{
                 width: 520px;
-                padding: 30px 0;
+                padding-bottom: 30px;
                 li{
                     width: 130px;
                     text-align: center;
@@ -429,6 +437,10 @@
                     }
                 }
             }
+        }
+        .products_banner{
+            width: 600px;
+            height: 650px;
         }
     }
     .banner{
@@ -503,6 +515,10 @@
     }
     .bass{
         @extend .products;
+        .products_banner{
+            background: url(imgUrl('bass_icon.png')) no-repeat -40px 70px;
+            background-size: 105%;
+        }
     }
     .advantage{
         background: url(imgUrl('bass_advantage_bg.png')) no-repeat center;
@@ -539,6 +555,10 @@
     }
     .circulation{
         @extend .products;
+        .products_banner{
+            background: url(imgUrl('circulation_icon.png')) no-repeat -40px 70px;
+            background-size: 105%;
+        }
     }
     .solution{
         header{

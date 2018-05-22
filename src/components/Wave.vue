@@ -47,7 +47,7 @@
                 let textureLoader = new TextureLoader();
                 let map = textureLoader.load('./static/img/ball.png');
                 // 创建精灵材质
-                let material = new SpriteMaterial();
+                let material = new SpriteMaterial({map:map});
                 // 创建精灵元素
                 let i = 0;
                 for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
@@ -89,7 +89,6 @@
             animate();
         },
         beforeDestroy() {
-            // 必须在组件销毁以前调用，以免重复绘制，导致页面变卡
             cancelAnimationFrame(this.timer);
         }
     }
