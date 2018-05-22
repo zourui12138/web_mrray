@@ -1,8 +1,10 @@
 <template>
     <div>
         <div class="banner">
-            <h1>积微仓储区块链</h1>
-            <p>解决传统仓储平台的信息不通造成损失、电商平台交易安全隐患、<br>远程发货信任危机等痛点，实现安全新人的仓储平台。</p>
+            <div>
+                <h1>积微仓储区块链</h1>
+                <p>解决传统仓储平台的信息不通造成损失、电商平台交易安全隐患、<br>远程发货信任危机等痛点，实现安全新人的仓储平台。</p>
+            </div>
         </div>
         <div class="function commonWidth">
             <header class="title">

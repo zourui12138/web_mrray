@@ -1,8 +1,10 @@
 <template>
     <div>
         <div class="banner">
-            <h1>运力共享区块链平台</h1>
-            <p>绿色共享运力区块链平台，是一个可以审计的区块链系统，方便交易确权、追踪<br>溯源，解决出现纠纷时难以取证和维权的问题。</p>
+            <div>
+                <h1>运力共享区块链平台</h1>
+                <p>绿色共享运力区块链平台，是一个可以审计的区块链系统，方便交易确权、追踪<br>溯源，解决出现纠纷时难以取证和维权的问题。</p>
+            </div>
         </div>
         <div class="function commonWidth">
             <header class="title">
