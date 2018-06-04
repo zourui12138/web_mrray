@@ -15,11 +15,7 @@
                         <h2>Solution</h2>
                         <SubNav class="subNav" :nav-list="solutionNav"/>
                     </li>
-                    <li class="fl" :class="currentNav === 'case' ? 'current' : ''">
-                        <h1>客户案例</h1>
-                        <h2>Solution</h2>
-                        <SubNav class="subNav" :nav-list="caseNav"/>
-                    </li>
+                    <li class="fl" :class="currentNav === 'case' ? 'current' : ''"><h1>客户案例</h1><h2>Solution</h2></li>
                     <li class="fl" @click="href()"><h1>演示平台</h1><h2>Solution</h2></li>
                     <li class="fl" :class="currentNav === 'news' ? 'current' : ''" @click="href('/news')"><h1>新闻资讯</h1><h2>News</h2></li>
                     <li class="fl" :class="currentNav === 'aboutUs' ? 'current' : ''">
@@ -57,8 +53,42 @@
 <script>
     import VuePerfectScrollbar from 'vue-perfect-scrollbar'
     import SubNav from '../../components/SubNav'
-    import product_bass from '../../assets/img/subNav/products/bass.png'
-    import product_bass_hover from '../../assets/img/subNav/products/bass_hover.png'
+    import product_government from '../../assets/img/subnav/products/government.png'
+    import product_government_hover from '../../assets/img/subnav/products/government_hover.png'
+    import product_share from '../../assets/img/subnav/products/share.png'
+    import product_share_hover from '../../assets/img/subnav/products/share_hover.png'
+    import product_storage from '../../assets/img/subnav/products/storage.png'
+    import product_storage_hover from '../../assets/img/subnav/products/storage_hover.png'
+    import product_medical from '../../assets/img/subnav/products/medical.png'
+    import product_medical_hover from '../../assets/img/subnav/products/medical_hover.png'
+    import product_dataSecurity from '../../assets/img/subnav/products/dataSecurity.png'
+    import product_dataSecurity_hover from '../../assets/img/subnav/products/dataSecurity_hover.png'
+    import product_dataAssets from '../../assets/img/subnav/products/dataAssets.png'
+    import product_dataAssets_hover from '../../assets/img/subnav/products/dataAssets_hover.png'
+    import product_watermark from '../../assets/img/subnav/products/watermark.png'
+    import product_watermark_hover from '../../assets/img/subnav/products/watermark_hover.png'
+    import product_rayShield from '../../assets/img/subnav/products/rayShield.png'
+    import product_rayShield_hover from '../../assets/img/subnav/products/rayShield_hover.png'
+    import product_sensitive from '../../assets/img/subnav/products/sensitive.png'
+    import product_sensitive_hover from '../../assets/img/subnav/products/sensitive_hover.png'
+    import product_circulation from '../../assets/img/subnav/products/circulation.png'
+    import product_circulation_hover from '../../assets/img/subnav/products/circulation_hover.png'
+    import solution_dataAssets from '../../assets/img/subnav/solution/dataAssets.png'
+    import solution_dataAssets_hover from '../../assets/img/subnav/solution/dataAssets_hover.png'
+    import solution_car from '../../assets/img/subnav/solution/car.png'
+    import solution_car_hover from '../../assets/img/subnav/solution/car_hover.png'
+    import solution_supply from '../../assets/img/subnav/solution/supply.png'
+    import solution_supply_hover from '../../assets/img/subnav/solution/supply_hover.png'
+    import solution_idcard from '../../assets/img/subnav/solution/idcard.png'
+    import solution_idcard_hover from '../../assets/img/subnav/solution/idcard_hover.png'
+    import solution_logistics from '../../assets/img/subnav/solution/logistics.png'
+    import solution_logistics_hover from '../../assets/img/subnav/solution/logistics_hover.png'
+    import solution_circulation from '../../assets/img/subnav/solution/circulation.png'
+    import solution_circulation_hover from '../../assets/img/subnav/solution/circulation_hover.png'
+    import about_jobs from '../../assets/img/subnav/aboutUs/jobs.png'
+    import about_jobs_hover from '../../assets/img/subnav/aboutUs/jobs_hover.png'
+    import about_introduce from '../../assets/img/subnav/aboutUs/introduce.png'
+    import about_introduce_hover from '../../assets/img/subnav/aboutUs/introduce_hover.png'
 
     export default {
         name: "platform",
@@ -67,80 +97,121 @@
             return{
                 productNav: [
                     {
-                        name: '迅鳐BASS平台',
-                        src: product_bass,
-                        hoverSrc: product_bass_hover,
-                        child: [
-                            {name: '政务区块链平台',router: '/product_governmentBlockChain',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '运力共享区块链平台',router: '/product_capacityShareBlockChain',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '仓储区块链平台',router: '/product_storageBlockChain',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '医疗区块链平台',router: '/product_medicalBlockChain',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '大数据安全网关',router: '/product_dataSecurity',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '数据资产防护系统',router: '/product_dataAssets',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '数字水印系统',router: '/product_watermark',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: 'RayShield',router: '/product_rayShield',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '敏感数据与免泄漏',router: '/product_sensitive',src: product_bass,hoverSrc: product_bass_hover},
-                        ]
+                        name: '政务区块链平台',
+                        router: '/product_governmentBlockChain',
+                        src: product_government,
+                        hoverSrc: product_government_hover
+                    },
+                    {
+                        name: '运力共享区块链平台',
+                        router: '/product_capacityShareBlockChain',
+                        src: product_share,
+                        hoverSrc: product_share_hover
+                    },
+                    {
+                        name: '仓储区块链平台',
+                        router: '/product_storageBlockChain',
+                        src: product_storage,
+                        hoverSrc: product_storage_hover
+                    },
+                    {
+                        name: '医疗区块链平台',
+                        router: '/product_medicalBlockChain',
+                        src: product_medical,
+                        hoverSrc: product_medical_hover
+                    },
+                    {
+                        name: '大数据安全网关',
+                        router: '/product_dataSecurity',
+                        src: product_dataSecurity,
+                        hoverSrc: product_dataSecurity_hover
+                    },
+                    {
+                        name: '数据资产防护系统',
+                        router: '/product_dataAssets',
+                        src: product_dataAssets,
+                        hoverSrc: product_dataAssets_hover
+                    },
+                    {
+                        name: '数字水印系统',
+                        router: '/product_watermark',
+                        src: product_watermark,
+                        hoverSrc: product_watermark_hover
+                    },
+                    {
+                        name: 'RayShield',
+                        router: '/product_rayShield',
+                        src: product_rayShield,
+                        hoverSrc: product_rayShield_hover
+                    },
+                    {
+                        name: '敏感数据与免泄漏',
+                        router: '/product_sensitive',
+                        src: product_sensitive,
+                        hoverSrc: product_sensitive_hover
                     },
                     {
                         name: '数据流通平台',
-                        src: product_bass,
-                        hoverSrc: product_bass_hover,
+                        src: product_circulation,
+                        hoverSrc: product_circulation_hover,
                         router: '/product_dataCirculation'
                     }
                 ],
                 solutionNav: [
                     {
-                        name: '迅鳐BASS平台',
-                        src: product_bass,
-                        hoverSrc: product_bass_hover,
-                        child: [
-                            {name: '数据资产',router: '/solution_dataAssets',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '汽车行业',router: '/solution_carIndustry',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '供应链、生鲜',router: '/solution_supplyChain',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '个人/机构征信',router: '/solution_credit',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '物流货运',router: '/solution_logistics',src: product_bass,hoverSrc: product_bass_hover},
-                            {name: '金融信贷',router: '/solution_financial',src: product_bass,hoverSrc: product_bass_hover},
-                        ]
+                        name: '数据资产',
+                        router: '/solution_dataAssets',
+                        src: solution_dataAssets,
+                        hoverSrc: solution_dataAssets_hover
+                    },
+                    {
+                        name: '汽车行业',
+                        router: '/solution_carIndustry',
+                        src: solution_car,
+                        hoverSrc: solution_car_hover
+                    },
+                    {
+                        name: '供应链、生鲜',
+                        router: '/solution_supplyChain',
+                        src: solution_supply,
+                        hoverSrc: solution_supply_hover
+                    },
+                    {
+                        name: '个人/机构征信',
+                        router: '/solution_credit',
+                        src: solution_idcard,
+                        hoverSrc: solution_idcard_hover
+                    },
+                    {
+                        name: '物流货运',
+                        router: '/solution_logistics',
+                        src: solution_logistics,
+                        hoverSrc: solution_logistics_hover
+                    },
+                    {
+                        name: '金融信贷',
+                        router: '/solution_financial',
+                        src: solution_idcard,
+                        hoverSrc: solution_idcard_hover
                     },
                     {
                         name: '数据流通平台',
-                        src: product_bass,
-                        hoverSrc: product_bass_hover,
+                        src: solution_circulation,
+                        hoverSrc: solution_circulation_hover,
                         router: '/solution_circulation'
-                    }
-                ],
-                caseNav: [
-                    {
-                        name: '积微仓储区块链',
-                        src: product_bass,
-                        hoverSrc: product_bass_hover,
-                        router: '/case_storageBlockChain'
-                    },
-                    {
-                        name: '运力共享区块链',
-                        src: product_bass,
-                        hoverSrc: product_bass_hover,
-                        router: '/case_capacityShareBlockChain'
-                    },
-                    {
-                        name: '政务区块链',
-                        src: product_bass,
-                        hoverSrc: product_bass_hover,
-                        router: '/case_governmentBlockChain'
                     }
                 ],
                 aboutUsNav: [
                     {
                         name: '企业介绍',
-                        src: product_bass,
-                        hoverSrc: product_bass_hover,
+                        src: about_introduce,
+                        hoverSrc: about_introduce_hover,
                         router: '/aboutUs_introduce'
                     },
                     {
                         name: '招贤纳士',
-                        src: product_bass,
-                        hoverSrc: product_bass_hover,
+                        src: about_jobs,
+                        hoverSrc: about_jobs_hover,
                         router: '/aboutUs_jobs'
                     }
                 ]
