@@ -43,6 +43,8 @@
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+    #editor{
+        line-height: 0;
+    }
 </style>

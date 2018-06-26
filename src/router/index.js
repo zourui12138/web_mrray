@@ -35,10 +35,20 @@ import AboutUs_Jobs from '../modules/platform/aboutUs/Jobs'
 import AboutUs_Introduce from '../modules/platform/aboutUs/Introduce'
 // 后台官网网站
 import Admin from '../modules/admin/Admin'
+import Admin_News from '../modules/admin/news/News'
+import Admin_Jobs from '../modules/admin/jobs/Jobs'
+// 404处理
+import NotFound from '../modules/error/NotFound'
 Vue.use(Router);
 
 export default new Router({
     routes: [
+        // 路由不存在的时候出现页面
+        {
+            path: '*',
+            name: 'notFound',
+            component: NotFound
+        },
         // 重定向
         {
             path: '/',
@@ -180,7 +190,19 @@ export default new Router({
         {
             path: '/admin',
             name: 'admin',
-            component: Admin
+            component: Admin,
+            children:[
+                {
+                    path: '/admin/news',
+                    name: 'admin_news',
+                    component: Admin_News
+                },
+                {
+                    path: '/admin/jobs',
+                    name: 'admin_jobs',
+                    component: Admin_Jobs
+                }
+            ]
         }
     ]
 });
