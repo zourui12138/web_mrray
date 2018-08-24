@@ -24,7 +24,7 @@
                     <div class="precipitation_content fl">
                         <h1>主权区块链技术蓝皮书</h1>
                         <p>2017年5月27日</p>
-                        <p>与积微、电子科大网络空间安全中心联合成立西南地区收个区块链研究所</p>
+                        <p>与积微、电子科大网络空间安全中心联合成立西南地区首个区块链研究所</p>
                     </div>
                 </li>
             </ul>
@@ -50,9 +50,9 @@
         <div class="bass">
             <div class="commonWidth clear">
                 <div class="products_content fl">
-                    <h1>迅鳐Bass平台&nbsp;—&nbsp;快速构建、开箱即用</h1>
+                    <h1>迅鳐Baas平台&nbsp;—&nbsp;快速构建、开箱即用</h1>
                     <h2>迅鳐区块链服务Baas平台，构建于迅鳐数据哨兵基础上。平台系统不仅符合大数据安全防护的标准，同时还能提供 多行业的解决方案和平台产品，用户在弹性、开放的Baas平台上能够快速构建自己的IT基础设施和区块链服务</h2>
-                    <h3>Bass产品服务</h3>
+                    <h3>Baas产品服务</h3>
                     <ul class="clear">
                         <li class="fl">
                             <div><div><img src="../../../assets/img/home/bass_governmentBlockChain.png" alt=""></div></div>
@@ -93,7 +93,7 @@
         </div>
         <div class="advantage commonWidth">
             <header class="title">
-                <h1>迅鳐Bass平台优势</h1>
+                <h1>迅鳐Baas平台优势</h1>
                 <h2>Product&nbsp;Function</h2>
             </header>
             <ul class="clear">
